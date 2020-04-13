@@ -1,7 +1,9 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+// serif fonts
+require("typeface-cormorant-garamond")
+require("typeface-merriweather")
 
-// You can delete this file if you're not using it
+// san-serif fonts
+require("typeface-gothic-a1")
+
+// mono-spaced fonts
+require("typeface-fira-code")

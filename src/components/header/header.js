@@ -1,12 +1,16 @@
+/** @jsx jsx */
+import React from "react"
+import { jsx } from "theme-ui"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import styled from "@emotion/styled"
+
+import Logo from "../logo/myLogo"
 
 const Header = ({ siteTitle }) => (
   <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+    sx={{
+      backgroundColor: "white",
     }}
   >
     <div
@@ -19,11 +23,11 @@ const Header = ({ siteTitle }) => (
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
+          sx={{
+            color: "text.dark",
           }}
         >
+          <Logo />
           {siteTitle}
         </Link>
       </h1>
