@@ -5,42 +5,41 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import styled from "@emotion/styled"
 
-import Logo from "../logo/myLogo"
+import MainNav from "../navigation/mainNav"
 
-const Header = ({ siteTitle }) => (
-  <header
+const StyledHeader = styled.header`
+  grid-column: ${props => props.gridStart} / ${props => props.gridEnd};
+  grid-row: 1;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+`
+
+const Header = props => (
+  <StyledHeader
+    {...props}
     sx={{
       backgroundColor: "white",
     }}
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          sx={{
-            color: "text.dark",
-          }}
-        >
-          <Logo />
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+    <MainNav />
+  </StyledHeader>
 )
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
+  gridStart: PropTypes.number,
+  gridEnd: PropTypes.number,
 }
 
 Header.defaultProps = {
   siteTitle: ``,
+  gridStart: 1,
+  gridEnd: -1,
 }
 
 export default Header

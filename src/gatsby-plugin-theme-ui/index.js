@@ -1,39 +1,24 @@
+import colors from "../components/globalStyles/colors"
 export default {
-  space: [0, 3, 9, 15, 30, 63, 129, 255, 510],
+  space: [0, 3, 9, 15, 30, 63, 129, 255, 360, 510],
   fonts: {
     body: `Gothic A1, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif`,
     heading: `Merriweather, system-ui, serif`,
+    logo: `Cormorant Garamond`,
     monospace: `Fira Code, monospace`,
   },
   fontSizes: [9, 12, 15, 18, 21, 24, 33, 48, 63, 96],
   fontWeights: {
+    light: 100,
     body: 300,
     heading: 600,
-    light: 100,
     bold: 600,
   },
   lineHeights: {
     body: 1.5,
     heading: 1.125,
   },
-  colors: {
-    text: {
-      light: "#D6DEE7",
-      medium: "#363636",
-      dark: "#161616",
-    },
-
-    background: {
-      light: "#D6DEE7",
-      dark: "#363636",
-    },
-    white: "#fefefe",
-    black: "#161616",
-    primary: "#BCBF88",
-    secondary: "#7279B6",
-    accent: "#B569C2",
-    muted: "#f1f3f4",
-  },
+  colors,
   styles: {
     root: {
       fontFamily: "body",
