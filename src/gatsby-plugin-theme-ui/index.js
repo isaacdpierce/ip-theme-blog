@@ -17,6 +17,7 @@ export default {
   lineHeights: {
     body: 1.5,
     heading: 1.125,
+    card: 1.2,
   },
   colors,
   styles: {

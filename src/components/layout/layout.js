@@ -18,10 +18,11 @@ const LayoutGrid = styled.div`
 
 const MainGrid = styled.main`
   grid-column: 1 / -1;
-  grid-row: 2 / span 1;
+  grid-row: 2;
   width: 100vw;
   display: grid;
   grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: 90px 1fr;
 `
 
 const Layout = ({ children }) => {

@@ -5,7 +5,7 @@ import styled from "@emotion/styled"
 
 const StyledHero = styled.section`
   grid-column: 1 / -1;
-  grid-row: 2;
+  grid-row: 1 / -1;
   height: 100%;
   min-height: calc(100vh - 100px);
   display: flex;

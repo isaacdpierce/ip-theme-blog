@@ -7,22 +7,24 @@ import Layout from "../components/layout/layout"
 import Hero from "../components/hero/hero"
 import SEO from "../components/seo"
 import useSiteMetaData from "../hooks/useSiteMetadata"
+import Sign from "../components/hero/sign"
+
+const SignWrapper = styled.div`
+  grid-column: 1 / -1;
+  grid-row: 1;
+  transform: translateX(1px);
+  display: flex;
+`
 
 const TextBoxWrapper = styled.section`
   grid-column: 2 / 16;
   grid-row: 2;
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
 `
 
 const StyledTextBox = styled.aside`
-  width: 40%;
-  border: 1px solid black;
-`
-const StyledRightTextBox = styled.aside`
-  width: 490px;
-  border: 1px solid black;
+  width: 45%;
 `
 
 const IndexPage = () => {
@@ -30,11 +32,20 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title={title} description={description} keywords={keywords} />
-      <TextBoxWrapper sx={{ py: 6 }}>
-        <StyledTextBox>Hello</StyledTextBox>
-        <StyledTextBox>Hello</StyledTextBox>
-      </TextBoxWrapper>
       <Hero />
+      <SignWrapper sx={{ py: 4 }}>
+        <Sign />
+      </SignWrapper>
+      <TextBoxWrapper sx={{ py: 5, fontSize: 7, letterSpacing: "heading" }}>
+        <StyledTextBox sx={{ textAlign: "right" }}>
+          I build and maintain dynamic e-commerce experiences <br></br>for
+          bricks and mortar retailers.
+        </StyledTextBox>
+        <StyledTextBox sx={{ color: "text.light" }}>
+          I build JAMstack websites and apps with Gatsby, React, Node,
+          PostgresQL, and GraphQL.
+        </StyledTextBox>
+      </TextBoxWrapper>
     </Layout>
   )
 }
