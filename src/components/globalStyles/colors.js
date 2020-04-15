@@ -11,6 +11,7 @@ const colors = {
   },
   white: "#fefefe",
   black: "#161616",
+  darkGrey: "#242424",
   primary: "#969960",
   secondary: "#7279B6",
   accent: "#B569C2",

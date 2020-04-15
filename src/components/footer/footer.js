@@ -61,7 +61,7 @@ const Footer = ({ siteUrl, siteTitle }) => {
   return (
     <StyledFooter
       sx={{
-        // backgroundColor: "background.dark",
+        backgroundColor: "darkGrey",
         p: 2,
       }}
     >
