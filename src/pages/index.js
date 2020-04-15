@@ -2,6 +2,7 @@
 import React from "react"
 import { jsx } from "theme-ui"
 import styled from "@emotion/styled"
+import { motion, AnimatePresence } from "framer-motion"
 
 import Layout from "../components/layout/layout"
 import HeroLeft from "../components/hero/heroLeft"
@@ -27,6 +28,7 @@ const IndexPage = () => {
       <SignWrapper sx={{ py: 4 }}>
         <Sign />
       </SignWrapper>
+
       <HeroLeft>
         <TextBox align="right" color="dark">
           I build and maintain dynamic e-commerce experiences for <br></br>
