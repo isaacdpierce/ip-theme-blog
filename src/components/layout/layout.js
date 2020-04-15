@@ -9,10 +9,13 @@ import Footer from "../footer/footer"
 import useSiteMetaData from "../../hooks/useSiteMetadata"
 import GlobalStyles from "../globalStyles/globalStyles"
 
+// import HeroLeft from "../hero/heroLeft"
+// import HeroRight from "../hero/heroRight"
+
 const LayoutGrid = styled.div`
   width: 100vw;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(16, 1fr);
   grid-template-rows: 100px 1fr;
 `
 
@@ -33,6 +36,8 @@ const Layout = ({ children }) => {
       <LayoutGrid>
         <GlobalStyles />
         <Header siteTitle={title} />
+        {/* <HeroLeft />
+        <HeroRight /> */}
         <MainGrid>{children}</MainGrid>
       </LayoutGrid>
       <Footer

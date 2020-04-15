@@ -20,6 +20,7 @@ const SignWrapper = styled.div`
 
 const IndexPage = () => {
   const { title, siteUrl, description, keywords } = useSiteMetaData()
+
   return (
     <Layout>
       <SEO title={title} description={description} keywords={keywords} />
