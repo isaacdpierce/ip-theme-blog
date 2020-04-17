@@ -36,15 +36,9 @@ const Layout = ({ children }) => {
       <LayoutGrid>
         <GlobalStyles />
         <Header siteTitle={title} />
-        {/* <HeroLeft />
-        <HeroRight /> */}
         <MainGrid>{children}</MainGrid>
       </LayoutGrid>
-      <Footer
-        siteTitle={title}
-        siteUrl={siteUrl}
-        sx={{ backgroundColor: "white" }}
-      />
+      <Footer siteTitle={title} siteUrl={siteUrl} />
     </>
   )
 }

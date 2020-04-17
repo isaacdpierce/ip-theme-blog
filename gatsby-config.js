@@ -19,6 +19,14 @@ module.exports = {
     `gatsby-plugin-theme-ui`,
     `gatsby-plugin-mdx`,
     `gatsby-plugin-advanced-sitemap`,
+
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data/`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

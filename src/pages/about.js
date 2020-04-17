@@ -8,7 +8,7 @@ import ListTextBox from "../components/textBox/listTextBox"
 import SEO from "../components/seo"
 
 const valuesArray = [
-  "I’m 60% Introvert and 40% Extrovert",
+  "I’m 60% introvert and 40% extrovert",
   "Above all — I value honesty and integrity",
   "It is important to me to understand the bigger picture",
   "It is important to me to be of service to others",
@@ -42,12 +42,14 @@ const About = () => {
     <Layout>
       <SEO title="About Isaac Pierce" />
       <HeroLeft>
-        <ListTextBox align="right" color="dark">
+        <ListTextBox align="right" color="dark" startAnimation="left">
           {valuesList}
         </ListTextBox>
       </HeroLeft>
       <HeroRight>
-        <ListTextBox color="light">{valuesParagraphs}</ListTextBox>
+        <ListTextBox color="light" startAnimation="right">
+          {valuesParagraphs}
+        </ListTextBox>
       </HeroRight>
     </Layout>
   )

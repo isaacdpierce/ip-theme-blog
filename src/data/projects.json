@@ -1,0 +1,16 @@
+[
+  {
+    "link": "/beatscape",
+    "title": "Beatscape Sound Animations",
+    "description": "Animated soundscapes.",
+    "tech": "React, Node, PostgresQL, WebAudioAPI",
+    "image": "./beatscape.png"
+  },
+  {
+    "link": "/berryman",
+    "title": "Berry Brothers Meats",
+    "description": "Shopify E-commerce solution.",
+    "tech": "Shopify dashboard, liquid, JQuery",
+    "image": "./past-site.png"
+  }
+]

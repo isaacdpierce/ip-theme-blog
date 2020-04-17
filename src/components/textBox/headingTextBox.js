@@ -1,10 +1,15 @@
 /** @jsx jsx */
 import React from "react"
 import { jsx } from "theme-ui"
+import { motion } from "framer-motion"
+import { getStart } from "../../helpers/helpers"
 
-const TextBox = ({ children, align, color }) => {
+const TextBox = ({ children, align, color, startAnimation }) => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, x: getStart(startAnimation, 500) }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ ease: "easeOut", duration: 1 }}
       sx={{
         textAlign: `${align}`,
         py: 6,
@@ -16,7 +21,7 @@ const TextBox = ({ children, align, color }) => {
       }}
     >
       {children}
-    </div>
+    </motion.div>
   )
 }
 

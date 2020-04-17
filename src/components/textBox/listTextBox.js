@@ -1,10 +1,15 @@
 /** @jsx jsx */
 import React from "react"
 import { jsx } from "theme-ui"
+import { motion } from "framer-motion"
+import { getStart } from "../../helpers/helpers"
 
-const ListTextBox = ({ children, align, color }) => {
+const ListTextBox = ({ children, align, color, startAnimation }) => {
   return (
-    <ul
+    <motion.ul
+      initial={{ opacity: 0, x: getStart(startAnimation, 500) }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ ease: "easeOut", duration: 1 }}
       sx={{
         textAlign: `${align}`,
         py: 5,
@@ -16,7 +21,7 @@ const ListTextBox = ({ children, align, color }) => {
       }}
     >
       {children}
-    </ul>
+    </motion.ul>
   )
 }
 

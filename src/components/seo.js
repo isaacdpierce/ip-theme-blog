@@ -28,8 +28,6 @@ function SEO({
     `
   )
 
-  console.log(metaImage)
-
   const metaDescription = description || site.siteMetadata.description
   const metaKeywords =
     keywords.join(",") || site.siteMetadata.keywords.join(",")

@@ -26,7 +26,7 @@ const mainNav = () => {
       }}
     >
       <Link to="/about/">about</Link>
-      <Link to="/portfolios/">portfolios</Link>
+      <Link to="/portfolio/">portfolio</Link>
       <Logo />
       <Link to="/resume/">resume</Link>
       <Link to="/blog/">blog</Link>

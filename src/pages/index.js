@@ -2,7 +2,6 @@
 import React from "react"
 import { jsx } from "theme-ui"
 import styled from "@emotion/styled"
-import { motion, AnimatePresence } from "framer-motion"
 
 import Layout from "../components/layout/layout"
 import HeroLeft from "../components/hero/heroLeft"
@@ -11,8 +10,9 @@ import SEO from "../components/seo"
 import useSiteMetaData from "../hooks/useSiteMetadata"
 import Sign from "../components/hero/sign"
 import TextBox from "../components/textBox/headingTextBox"
+import { motion } from "framer-motion"
 
-const SignWrapper = styled.div`
+const SignWrapper = styled(motion.div)`
   grid-column: 1 / -1;
   grid-row: 1;
   transform: translateX(1px);
@@ -25,18 +25,24 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title={title} description={description} keywords={keywords} />
-      <SignWrapper sx={{ py: 4 }}>
+
+      <SignWrapper
+        sx={{ py: 4 }}
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeOut", duration: 1 }}
+      >
         <Sign />
       </SignWrapper>
 
       <HeroLeft>
-        <TextBox align="right" color="dark">
+        <TextBox align="right" color="dark" startAnimation="left">
           I build and maintain dynamic e-commerce experiences for <br></br>
           bricks and mortar retailers.
         </TextBox>
       </HeroLeft>
       <HeroRight>
-        <TextBox color="light">
+        <TextBox color="light" startAnimation="right">
           I build JAMstack <br></br>websites and apps <br></br>with Gatsby,
           React, Node, PostgresQL, and GraphQL.
         </TextBox>
