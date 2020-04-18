@@ -17,18 +17,21 @@ const StyledHeader = styled.header`
   position: sticky;
   top: 0;
   z-index: 99;
+  box-shadow: 0 1px 1px 1px #00000015;
 `
 
-const Header = props => (
-  <StyledHeader
-    {...props}
-    sx={{
-      backgroundColor: "white",
-    }}
-  >
-    <MainNav />
-  </StyledHeader>
-)
+const Header = props => {
+  return (
+    <StyledHeader
+      {...props}
+      sx={{
+        backgroundColor: "white",
+      }}
+    >
+      <MainNav />
+    </StyledHeader>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

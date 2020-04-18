@@ -5,21 +5,19 @@ import styled from "@emotion/styled"
 
 const StyledHero = styled.section`
   grid-column: 1 / -1;
-  grid-row: 1 / -1;
-  height: 100%;
+  grid-row: 2 / -1;
   min-height: calc(100vh - 100px);
   display: flex;
   z-index: -1;
+  box-shadow: 0 1px 2px 2px #00000025;
 `
 
 const StyledLeft = styled.div`
   width: 50vw;
-  height: 100%;
 `
 
 const StyledRight = styled.div`
   width: 50vw;
-  height: 100%;
 `
 
 const Hero = () => {

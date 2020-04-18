@@ -1,11 +1,67 @@
 [
   {
     "link": "/beatscape",
-    "title": "Beatscape Sound Animations",
+    "title": "Beatscape Sonimations",
     "description": "Animated soundscapes.",
-    "tech": "TECH: React, Node, PostgresQL, WebAudioAPI",
+    "tech": "TECH: React, Node, PostgresQL, WebAudioAPI, Knex",
     "image": "./beatscape.png",
-    "date": "2019"
+    "date": "2019",
+    "url": "https://beatscape.netlify.app/",
+    "github": [
+      { "type": "client", "url": "https://github.com/isaacdpierce/beatscape" },
+      {
+        "type": "server",
+        "url": "https://github.com/isaacdpierce/beatscape-server-knex"
+      }
+    ]
+  },
+  {
+    "link": "/beatscape",
+    "title": "Beatscape Sound",
+    "description": "Animated soundscapes.",
+    "tech": "TECH: React, Node, PostgresQL, WebAudioAPI, Knex",
+    "image": "./beatscape.png",
+    "date": "2019",
+    "url": "https://beatscape.netlify.app/",
+    "github": [
+      { "type": "client", "url": "https://github.com/isaacdpierce/beatscape" },
+      {
+        "type": "server",
+        "url": "https://github.com/isaacdpierce/beatscape-server-knex"
+      }
+    ]
+  },
+  {
+    "link": "/beatscape",
+    "title": "Beatscape S",
+    "description": "Animated soundscapes.",
+    "tech": "TECH: React, Node, PostgresQL, WebAudioAPI, Knex",
+    "image": "./beatscape.png",
+    "date": "2019",
+    "url": "https://beatscape.netlify.app/",
+    "github": [
+      { "type": "client", "url": "https://github.com/isaacdpierce/beatscape" },
+      {
+        "type": "server",
+        "url": "https://github.com/isaacdpierce/beatscape-server-knex"
+      }
+    ]
+  },
+  {
+    "link": "/beatscape",
+    "title": "Beatsmations",
+    "description": "Animated soundscapes.",
+    "tech": "TECH: React, Node, PostgresQL, WebAudioAPI, Knex",
+    "image": "./beatscape.png",
+    "date": "2019",
+    "url": "https://beatscape.netlify.app/",
+    "github": [
+      { "type": "client", "url": "https://github.com/isaacdpierce/beatscape" },
+      {
+        "type": "server",
+        "url": "https://github.com/isaacdpierce/beatscape-server-knex"
+      }
+    ]
   },
   {
     "link": "/berryman",
@@ -13,6 +69,7 @@
     "description": "Shopify E-commerce solution.",
     "tech": "TECH: Shopify dashboard, liquid, Javascript, JQuery",
     "image": "./past-site.png",
-    "date": "2019 - Present"
+    "date": "2019 - Present",
+    "url": "https://berrymanfarms.ca/"
   }
 ]

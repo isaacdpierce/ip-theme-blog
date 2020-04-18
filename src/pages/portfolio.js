@@ -4,6 +4,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { graphql } from "gatsby"
 import DisplayCard from "../components/cards/animatedDisplayCard"
+import Timeline from "../components/timeline/timeline"
 
 import SEO from "../components/seo"
 import Layout from "../components/layout/layout"
@@ -25,12 +26,14 @@ const Portfolios = ({ data }) => {
     <Layout>
       <SEO title="The Portfolio of Isaac Pierce" />
       <StyledPortfolioSection>
+        <Timeline />
         {projects.map(({ node: project }, index) => {
-          const { title, description, date, link, tech } = project
+          const { title, description, date, link, tech, url, github } = project
           const image = project.image.childImageSharp.fluid
 
           return (
             <DisplayCard
+              key={title}
               title={title}
               description={description}
               image={image}
@@ -38,6 +41,8 @@ const Portfolios = ({ data }) => {
               date={date}
               link={link}
               excerpt={tech}
+              url={url}
+              github={github}
             />
           )
         })}
@@ -57,6 +62,11 @@ export const projectQuery = graphql`
           description
           tech
           date
+          url
+          github {
+            type
+            url
+          }
           image {
             childImageSharp {
               fluid(maxWidth: 600) {

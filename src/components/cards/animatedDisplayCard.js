@@ -11,14 +11,15 @@ import { Link } from "gatsby"
 
 const StyledImage = styled.div`
   display: flex;
-  width: 300px;
+  width: 480px;
   flex-shrink: 0;
 `
 
 const StyledContent = styled(motion.div)`
   display: flex;
   border-radius: 3px;
-  box-shadow: 0px 3px 3px 3px #00000025;
+  box-shadow: 0px 1px 1px 1px #00000035;
+  border-top: 1px solid #ffffff15;
   min-width: 60vw;
 `
 
@@ -30,7 +31,26 @@ const DisplayCard = ({
   description,
   excerpt,
   index,
+  url,
+  github,
 }) => {
+  const showTitleAndDate = () => {
+    if (link) {
+      return (
+        <Link to={link}>
+          <h3>{title}</h3>
+          <span>{date}</span>
+        </Link>
+      )
+    } else {
+      return (
+        <>
+          <h3>{title}</h3>
+          <span>{date}</span>
+        </>
+      )
+    }
+  }
   return (
     <StyledContent
       initial={{ x: isIndexEven(index) ? 1200 : -1200 }}
@@ -40,11 +60,11 @@ const DisplayCard = ({
         backgroundColor: `background.${isIndexEven(index) ? "dark" : "light"}`,
         color: `text.${isIndexEven(index) ? "light" : "dark"}`,
         p: 4,
-        mb: 4,
+        mb: 5,
         fontFamily: "body",
       }}
     >
-      <StyledImage sx={{ mr: 3 }}>
+      <StyledImage sx={{ mr: 4 }}>
         <Img style={{ width: "100%" }} fluid={image} />
       </StyledImage>
       <div
@@ -55,18 +75,28 @@ const DisplayCard = ({
           },
           span: {
             color: `links.${isIndexEven(index) ? "light" : "dark"}`,
+            textTransform: "uppercase",
+            mr: 3,
           },
           p: {
             m: 0,
           },
         }}
       >
-        <Link to={link}>
-          <h3>{title}</h3>
-          <span>{date}</span>
-        </Link>
+        {showTitleAndDate()}
         {excerpt && <p>{excerpt}</p>}
         {description && <p>{description}</p>}
+        {url && (
+          <span>
+            <a href={url}>Live</a>
+          </span>
+        )}
+        {github &&
+          github.map(link => (
+            <span>
+              <a href={link.url}>{link.type}</a>
+            </span>
+          ))}
       </div>
     </StyledContent>
   )
@@ -75,11 +105,13 @@ const DisplayCard = ({
 DisplayCard.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.object.isRequired,
-  link: PropTypes.string.isRequired,
+  link: PropTypes.string,
   date: PropTypes.string,
   description: PropTypes.string,
   excerpt: PropTypes.string,
   index: PropTypes.number.isRequired,
+  url: PropTypes.string,
+  github: PropTypes.array,
 }
 
 export default DisplayCard

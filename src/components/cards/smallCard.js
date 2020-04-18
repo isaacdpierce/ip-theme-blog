@@ -12,6 +12,8 @@ const StyledCard = styled.section`
   height: 190px;
   width: 510px;
   border-radius: 3px;
+  border-top: 1px solid #444;
+  box-shadow: 0 1px 1px 1px #00000025;
 `
 
 const Card = ({ children }) => {
