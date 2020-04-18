@@ -9,6 +9,10 @@ const colors = {
     light: "#D6DEE7",
     dark: "#363636",
   },
+  links: {
+    light: "#969960",
+    dark: "#6a6e29",
+  },
   white: "#fefefe",
   black: "#161616",
   darkGrey: "#242424",

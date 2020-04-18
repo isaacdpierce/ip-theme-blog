@@ -3,14 +3,16 @@
     "link": "/beatscape",
     "title": "Beatscape Sound Animations",
     "description": "Animated soundscapes.",
-    "tech": "React, Node, PostgresQL, WebAudioAPI",
-    "image": "./beatscape.png"
+    "tech": "TECH: React, Node, PostgresQL, WebAudioAPI",
+    "image": "./beatscape.png",
+    "date": "2019"
   },
   {
     "link": "/berryman",
     "title": "Berry Brothers Meats",
     "description": "Shopify E-commerce solution.",
-    "tech": "Shopify dashboard, liquid, JQuery",
-    "image": "./past-site.png"
+    "tech": "TECH: Shopify dashboard, liquid, Javascript, JQuery",
+    "image": "./past-site.png",
+    "date": "2019 - Present"
   }
 ]

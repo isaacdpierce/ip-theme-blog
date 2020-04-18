@@ -2,14 +2,13 @@
 import { jsx } from "theme-ui"
 import React from "react"
 import styled from "@emotion/styled"
-import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { graphql } from "gatsby"
+import DisplayCard from "../components/cards/animatedDisplayCard"
 
 import SEO from "../components/seo"
 import Layout from "../components/layout/layout"
 import HeroLeft from "../components/hero/heroLeft"
 import HeroRight from "../components/hero/heroRight"
-import PostsList from "../components/layout/posts-list-layout"
 
 const StyledPortfolioSection = styled.section`
   grid-column: 1 / -1;
@@ -27,23 +26,21 @@ const Portfolios = ({ data }) => {
   return (
     <Layout>
       <SEO title="The Portfolio of Isaac Pierce" />
-      <HeroLeft />
-      <HeroRight />
       <StyledPortfolioSection>
         {projects.map(({ node: project }, index) => {
-          console.log(project.image)
+          const { title, description, date, link, tech } = project
+          const image = project.image.childImageSharp.fluid
 
           return (
-            <StyledPortfolioCard key={project.title}>
-              <h2>{project.title}</h2>
-              <p>{project.description}</p>
-              <div className="card__image" sx={{ mr: 3 }}>
-                <Img
-                  style={{ width: "100%" }}
-                  fluid={project.image.childImageSharp.fluid}
-                />
-              </div>
-            </StyledPortfolioCard>
+            <DisplayCard
+              title={title}
+              description={description}
+              image={image}
+              index={index}
+              date={date}
+              link={link}
+              excerpt={tech}
+            />
           )
         })}
       </StyledPortfolioSection>
@@ -61,6 +58,7 @@ export const projectQuery = graphql`
           title
           description
           tech
+          date
           image {
             childImageSharp {
               fluid(maxWidth: 600) {

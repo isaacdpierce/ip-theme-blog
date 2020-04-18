@@ -14,7 +14,7 @@ const StyledHeroLeft = styled.div`
 
 const HeroLeft = props => {
   return (
-    <StyledHeroLeft {...props} sx={{ backgroundColor: "background.light" }}>
+    <StyledHeroLeft sx={{ backgroundColor: "background.light" }}>
       {props.children}
     </StyledHeroLeft>
   )
