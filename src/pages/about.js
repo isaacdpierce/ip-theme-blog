@@ -2,9 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout/layout"
-import HeroLeft from "../components/hero/heroLeft"
-import HeroRight from "../components/hero/heroRight"
-import ListTextBox from "../components/textBox/listTextBox"
+import AnimatedListTextBox from "../components/textBox/animatedListTextBox"
 import SEO from "../components/seo"
 
 const valuesArray = [
@@ -41,16 +39,12 @@ const About = () => {
   return (
     <Layout>
       <SEO title="About Isaac Pierce" />
-      <HeroLeft>
-        <ListTextBox align="right" color="dark" startAnimation="left">
-          {valuesList}
-        </ListTextBox>
-      </HeroLeft>
-      <HeroRight>
-        <ListTextBox color="light" startAnimation="right">
-          {valuesParagraphs}
-        </ListTextBox>
-      </HeroRight>
+      <AnimatedListTextBox align="right" color="dark" startAnimation="left">
+        {valuesList}
+      </AnimatedListTextBox>
+      <AnimatedListTextBox color="light" startAnimation="right">
+        {valuesParagraphs}
+      </AnimatedListTextBox>
     </Layout>
   )
 }

@@ -4,12 +4,10 @@ import { jsx } from "theme-ui"
 import styled from "@emotion/styled"
 
 import Layout from "../components/layout/layout"
-import HeroLeft from "../components/hero/heroLeft"
-import HeroRight from "../components/hero/heroRight"
 import SEO from "../components/seo"
 import useSiteMetaData from "../hooks/useSiteMetadata"
 import Sign from "../components/hero/sign"
-import TextBox from "../components/textBox/headingTextBox"
+import AnimatedTextBox from "../components/textBox/animatedheadingTextBox"
 import { motion } from "framer-motion"
 
 const SignWrapper = styled(motion.div)`
@@ -35,18 +33,15 @@ const IndexPage = () => {
         <Sign />
       </SignWrapper>
 
-      <HeroLeft>
-        <TextBox align="right" color="dark" startAnimation="left">
-          I build and maintain dynamic e-commerce experiences for <br></br>
-          bricks and mortar retailers.
-        </TextBox>
-      </HeroLeft>
-      <HeroRight>
-        <TextBox color="light" startAnimation="right">
-          I build JAMstack <br></br>websites and apps <br></br>with Gatsby,
-          React, Node, PostgresQL, and GraphQL.
-        </TextBox>
-      </HeroRight>
+      <AnimatedTextBox align="right" color="dark" startAnimation="left">
+        I build and maintain dynamic e-commerce experiences for <br></br>
+        bricks and mortar retailers.
+      </AnimatedTextBox>
+
+      <AnimatedTextBox color="light" startAnimation="right">
+        I build JAMstack <br></br>websites and apps <br></br>with Gatsby, React,
+        Node, PostgresQL, and GraphQL.
+      </AnimatedTextBox>
     </Layout>
   )
 }

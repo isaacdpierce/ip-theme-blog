@@ -5,8 +5,6 @@ import { Link, graphql } from "gatsby"
 import styled from "@emotion/styled"
 
 import Layout from "../components/layout/layout"
-import HeroLeft from "../components/hero/heroLeft"
-import HeroRight from "../components/hero/heroRight"
 import PostsList from "../components/layout/posts-list-layout"
 
 const StyledPostSection = styled.section`
@@ -21,8 +19,6 @@ const BlogIndex = ({ data }) => {
 
   return (
     <Layout>
-      <HeroLeft />
-      <HeroRight />
       <StyledPostSection sx={{ my: 1 }}>
         <PostsList posts={posts} />
       </StyledPostSection>

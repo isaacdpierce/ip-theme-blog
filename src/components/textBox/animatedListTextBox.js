@@ -2,11 +2,20 @@
 import React from "react"
 import { jsx } from "theme-ui"
 import { motion } from "framer-motion"
+import styled from "@emotion/styled"
 import { getStart } from "../../helpers/helpers"
 
-const ListTextBox = ({ children, align, color, startAnimation }) => {
+const StyledListTextBox = styled(motion.ul)`
+  grid-column: ${props =>
+    props.startAnimation === "left" ? "1 / 9" : "9 / -1"};
+  grid-row: 1 / -1;
+`
+
+const ListTextBox = props => {
+  const { children, align, color, startAnimation } = props
   return (
-    <motion.ul
+    <StyledListTextBox
+      {...props}
       initial={{ opacity: 0, x: getStart(startAnimation, 500) }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ ease: "easeOut", duration: 1 }}
@@ -21,7 +30,7 @@ const ListTextBox = ({ children, align, color, startAnimation }) => {
       }}
     >
       {children}
-    </motion.ul>
+    </StyledListTextBox>
   )
 }
 

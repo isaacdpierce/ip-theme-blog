@@ -9,8 +9,7 @@ import Footer from "../footer/footer"
 import useSiteMetaData from "../../hooks/useSiteMetadata"
 import GlobalStyles from "../globalStyles/globalStyles"
 
-import HeroLeft from "../hero/heroLeft"
-import HeroRight from "../hero/heroRight"
+import Hero from "../hero/hero"
 
 const LayoutGrid = styled.div`
   width: 100vw;
@@ -36,11 +35,8 @@ const Layout = ({ children }) => {
       <LayoutGrid>
         <GlobalStyles />
         <Header siteTitle={title} />
-        <MainGrid>
-          <HeroLeft />
-          <HeroRight />
-          {children}
-        </MainGrid>
+        <Hero />
+        <MainGrid>{children}</MainGrid>
       </LayoutGrid>
       <Footer siteTitle={title} siteUrl={siteUrl} />
     </>

@@ -2,8 +2,6 @@
 import React from "react"
 import { jsx } from "theme-ui"
 import styled from "@emotion/styled"
-import HeroLeft from "./heroLeft"
-import HeroRight from "./heroRight"
 
 const StyledHero = styled.section`
   grid-column: 1 / -1;
@@ -26,17 +24,10 @@ const StyledRight = styled.div`
 
 const Hero = () => {
   return (
-    <>
-      <HeroLeft>
-        <p>Left</p>
-      </HeroLeft>
-      <HeroRight>Right</HeroRight>
-    </>
-    // <StyledHero>
-    //   {/* <StyledLeft sx={{ backgroundColor: "background.light" }} /> */}
-    //   {/* <StyledRight sx={{ backgroundColor: "background.dark" }} /> */}
-
-    // </StyledHero>
+    <StyledHero>
+      <StyledLeft sx={{ backgroundColor: "background.light" }} />
+      <StyledRight sx={{ backgroundColor: "background.dark" }} />
+    </StyledHero>
   )
 }
 

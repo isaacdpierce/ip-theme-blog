@@ -7,8 +7,6 @@ import DisplayCard from "../components/cards/animatedDisplayCard"
 
 import SEO from "../components/seo"
 import Layout from "../components/layout/layout"
-import HeroLeft from "../components/hero/heroLeft"
-import HeroRight from "../components/hero/heroRight"
 
 const StyledPortfolioSection = styled.section`
   grid-column: 1 / -1;
