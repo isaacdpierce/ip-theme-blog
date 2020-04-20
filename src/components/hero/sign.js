@@ -1,10 +1,10 @@
 import React from "react"
 
-export default () => {
+export default ({ height }) => {
   return (
     <svg
       width="100%"
-      height="100%"
+      height={height}
       viewBox="0 0 326 24"
       xmlns="http://www.w3.org/2000/svg"
     >

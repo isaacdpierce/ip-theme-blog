@@ -25,22 +25,22 @@ const IndexPage = () => {
       <SEO title={title} description={description} keywords={keywords} />
 
       <SignWrapper
-        sx={{ py: 4 }}
-        initial={{ opacity: 0, y: -100 }}
+        sx={{ py: 5 }}
+        initial={{ opacity: 0, y: -300 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ ease: "easeOut", duration: 1 }}
+        transition={{ type: "spring", mass: 0.7, duration: 1, delay: 1 }}
       >
-        <Sign />
+        <Sign height="20px" />
       </SignWrapper>
 
-      <AnimatedTextBox align="right" color="dark" startAnimation="left">
-        I build and maintain dynamic e-commerce experiences for <br></br>
-        bricks and mortar retailers.
+      <AnimatedTextBox align="right" color="dark" side="left">
+        I build and maintain <br></br>dynamic e-commerce experiences <br></br>
+        for bricks and mortar <br></br>retailers.
       </AnimatedTextBox>
 
-      <AnimatedTextBox color="light" startAnimation="right">
-        I build JAMstack <br></br>websites and apps <br></br>with Gatsby, React,
-        Node, PostgresQL, and GraphQL.
+      <AnimatedTextBox color="light" side="right">
+        I build JAMstack <br></br>websites and apps with <br></br>React, Node,
+        <br></br>PostgresQL, GraphQL, <br></br>and Gatsby.
       </AnimatedTextBox>
     </Layout>
   )

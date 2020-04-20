@@ -4,7 +4,7 @@ import React from "react"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
 import { motion } from "framer-motion"
-import { isIndexEven } from "../../helpers/helpers"
+import { isEven } from "../../helpers/helpers"
 import PropTypes from "prop-types"
 
 import { Link } from "gatsby"
@@ -21,6 +21,7 @@ const StyledContent = styled(motion.div)`
   box-shadow: 0px 1px 1px 1px #00000035;
   border-top: 1px solid #ffffff15;
   min-width: 60vw;
+  max-width: 75vw;
 `
 
 const DisplayCard = ({
@@ -53,12 +54,12 @@ const DisplayCard = ({
   }
   return (
     <StyledContent
-      initial={{ x: isIndexEven(index) ? 1200 : -1200 }}
+      initial={{ x: isEven(index) ? 1200 : -1200 }}
       animate={{ x: 0 }}
       transition={{ duration: 1 }}
       sx={{
-        backgroundColor: `background.${isIndexEven(index) ? "dark" : "light"}`,
-        color: `text.${isIndexEven(index) ? "light" : "dark"}`,
+        backgroundColor: `background.${isEven(index) ? "dark" : "light"}`,
+        color: `text.${isEven(index) ? "light" : "dark"}`,
         p: 4,
         mb: 5,
         fontFamily: "body",
@@ -70,11 +71,11 @@ const DisplayCard = ({
       <div
         sx={{
           h3: {
-            color: `text.${isIndexEven(index) ? "light" : "dark"}`,
+            color: `text.${isEven(index) ? "light" : "dark"}`,
             m: 0,
           },
           span: {
-            color: `links.${isIndexEven(index) ? "light" : "dark"}`,
+            color: `links.${isEven(index) ? "light" : "dark"}`,
             textTransform: "uppercase",
             mr: 3,
           },

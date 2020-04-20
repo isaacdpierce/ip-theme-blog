@@ -6,4 +6,4 @@ export const getStart = (start, num) => {
 
 export const setOddEvenOffset = (i, num) => (i % 2 === 0 ? -num : num)
 
-export const isIndexEven = i => (i % 2 === 0 ? true : false)
+export const isEven = num => (num % 2 === 0 ? true : false)

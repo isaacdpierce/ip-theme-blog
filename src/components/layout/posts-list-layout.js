@@ -10,9 +10,11 @@ import { isIndexEven } from "../../helpers/helpers"
 import { Link } from "gatsby"
 
 const StyledBlogList = styled.div`
-  width: 60vw;
+  grid-column: 1 / -1;
+  grid-row: 2 / -1;
   display: flex;
   flex-direction: column;
+  align-items: center;
 `
 
 const PostsList = ({ posts }) => {

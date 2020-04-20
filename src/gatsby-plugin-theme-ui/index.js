@@ -12,7 +12,7 @@ export default {
     light: 100,
     body: 300,
     heading: 600,
-    bold: 600,
+    bold: 700,
   },
   lineHeights: {
     body: 1.5,

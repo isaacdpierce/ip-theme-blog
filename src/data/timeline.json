@@ -1,12 +1,32 @@
 [
   {
-    "title": "Beatscape Sound Animations",
-    "description": "Animated soundscapes.",
+    "title": "Grit",
+    "description": "Currently studying Functional Programming, Algorithms, University Linear Algebra, Calculus, Computer Science, and C++.",
+    "date": "2020"
+  },
+  {
+    "title": "Refinement",
+    "description": "Gatsby, Figma, CSS-in-JS, animations, C#, Unity Engine, API’s, and Typescript.",
+    "date": "2019"
+  },
+  {
+    "title": "Clarity",
+    "description": "Thinkful Bootcamp. Full Stack Javascript, React, Node, PostgresQL, algoritms and design structures.",
     "date": "2018"
   },
   {
-    "title": "Berry Brothers Meats",
-    "description": "Shopify E-commerce solution.",
-    "date": "2019"
+    "title": "Passion",
+    "description": "Over 30 online courses. Javascript,React, Redux, ES6, GraphQL, Node, GIT, Liquid, SASS, BEM, accessibilty, animations and more. ",
+    "date": "2016"
+  },
+  {
+    "title": "Commitment",
+    "description": "Commit to becoming a professional developer. Starting with  Michael Hartyl's infamous Ruby on Rails course, Ruby, and Object-Oriented Programming.",
+    "date": "2014"
+  },
+  {
+    "title": "Ignite",
+    "description": "It began with the usual suspects Wordpress, HTML, CSS, jQuery and Photoshop.",
+    "date": "2008"
   }
 ]

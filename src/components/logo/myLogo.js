@@ -3,9 +3,9 @@ import React from "react"
 export default () => {
   return (
     <svg
-      width="52"
-      height="52"
-      viewBox="0 0 52 52"
+      width="30"
+      height="30"
+      viewBox="0 0 55 55"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
