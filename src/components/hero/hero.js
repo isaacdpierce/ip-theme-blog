@@ -6,7 +6,7 @@ import styled from "@emotion/styled"
 const StyledHero = styled.section`
   grid-column: 1 / -1;
   grid-row: 2 / -1;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 70px);
   display: flex;
   z-index: -1;
   box-shadow: 0 1px 2px 2px #00000025;

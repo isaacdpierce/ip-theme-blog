@@ -1,13 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import React from "react"
-import Img from "gatsby-image"
 import styled from "@emotion/styled"
-import { motion } from "framer-motion"
 import DisplayCard from "../cards/animatedDisplayCard"
-import { isIndexEven } from "../../helpers/helpers"
-
-import { Link } from "gatsby"
 
 const StyledBlogList = styled.div`
   grid-column: 1 / -1;

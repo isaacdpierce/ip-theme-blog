@@ -21,6 +21,7 @@ const mainNav = () => {
         a: {
           fontFamily: "body",
           color: "text.medium",
+          fontSize: 2,
           width: "120px",
         },
       }}

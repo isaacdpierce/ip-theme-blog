@@ -6,11 +6,10 @@ import styled from "@emotion/styled"
 
 const StyledCard = styled.section`
   display: flex;
-
   justify-content: center;
   align-items: center;
-  height: 190px;
-  width: 510px;
+  height: 150px;
+  width: 450px;
   border-radius: 3px;
   border-top: 1px solid #444;
   box-shadow: 0 1px 1px 1px #00000025;
@@ -23,7 +22,7 @@ const Card = ({ children }) => {
         backgroundColor: "background.dark",
         color: "text.light",
         p: 4,
-        fontSize: 2,
+        fontSize: 1,
         lineHeight: "card",
       }}
     >

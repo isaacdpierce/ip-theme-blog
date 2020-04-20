@@ -16,11 +16,11 @@ import RookLogo from "../logo/rookLogo"
 const StyledFooter = styled.footer`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 250px 50px;
+  grid-template-rows: 200px 50px;
   position: sticky;
   bottom: 0;
   z-index: -99;
-  height: 300px;
+  height: 250px;
 `
 
 const Copyright = styled.section`
@@ -34,10 +34,6 @@ const ContentWrapper = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`
-
-const LogoWrapper = styled.div`
-  /* width: 150px; */
 `
 
 const ImageWrapper = styled.div`
@@ -67,11 +63,11 @@ const Footer = ({ siteUrl, siteTitle }) => {
     >
       <ContentWrapper>
         <Card>
-          <ImageWrapper sx={{ mr: 3 }}>
+          <ImageWrapper sx={{ mr: 4 }}>
             <ProfileImg />
           </ImageWrapper>
-          <TextWrapper sx={{ width: "60%" }}>
-            <h6 sx={{ mb: 2 }}>Work with me!</h6>
+          <TextWrapper sx={{ width: "70%" }}>
+            <h6 sx={{ mb: 1 }}>Work with me</h6>
             <p sx={{ m: 0 }}>
               I value honesty, integrity and clear communication. I govern a
               genuine desire to understand people and their needs. I'm
@@ -80,17 +76,25 @@ const Footer = ({ siteUrl, siteTitle }) => {
             </p>
           </TextWrapper>
         </Card>
-        <LogoWrapper sx={{ p: 3 }}>
-          <RookLogo />
-        </LogoWrapper>
+
+        <RookLogo />
+
         <Card>
           <TextWrapper sx={{ width: "70%" }}>
-            <h6 sx={{ mb: 2 }}>Contact me</h6>
+            <h6 sx={{ mb: 2 }}>Connect with me</h6>
             <SocialWrapper>
-              <Mail />
-              <Github />
-              <LinkedIn />
-              <Twitter />
+              <a href="mailto: hello@isaacpierce.io?Subject=Hi%20Isaac">
+                <Mail />
+              </a>
+              <a href="https://github.com/isaacdpierce">
+                <Github />
+              </a>
+              <a href="https://www.linkedin.com/in/isaacpierce/">
+                <LinkedIn />
+              </a>
+              <a href="https://twitter.com/isaacdpierce">
+                <Twitter />
+              </a>
             </SocialWrapper>
           </TextWrapper>
         </Card>

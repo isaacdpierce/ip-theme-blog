@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 
 const valuesArray = [
   "I’m 60% introvert and 40% extrovert",
-  "Above all — I value honesty and integrity",
+  "I value honesty and integrity",
   "It is important to me to understand the bigger picture",
   "It is important to me to be of service to others",
   "I work first, play later",
