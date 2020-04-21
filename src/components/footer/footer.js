@@ -20,6 +20,7 @@ const StyledFooter = styled.footer`
   position: sticky;
   bottom: 0;
   z-index: -99;
+  width: 100vw;
   height: 250px;
 `
 
@@ -77,24 +78,37 @@ const Footer = ({ siteUrl, siteTitle }) => {
           </TextWrapper>
         </Card>
 
-        <RookLogo />
+        <div>
+          <RookLogo />
+        </div>
 
         <Card>
           <TextWrapper sx={{ width: "70%" }}>
             <h6 sx={{ mb: 2 }}>Connect with me</h6>
             <SocialWrapper>
-              <a href="mailto: hello@isaacpierce.io?Subject=Hi%20Isaac">
-                <Mail />
-              </a>
-              <a href="https://github.com/isaacdpierce">
-                <Github />
-              </a>
-              <a href="https://www.linkedin.com/in/isaacpierce/">
-                <LinkedIn />
-              </a>
-              <a href="https://twitter.com/isaacdpierce">
-                <Twitter />
-              </a>
+              <div>
+                <a href="mailto: hello@isaacpierce.io?Subject=Hi%20Isaac">
+                  <Mail />
+                </a>
+              </div>
+
+              <div>
+                <a href="https://github.com/isaacdpierce">
+                  <Github />
+                </a>
+              </div>
+
+              <div>
+                <a href="https://www.linkedin.com/in/isaacpierce/">
+                  <LinkedIn />
+                </a>
+              </div>
+
+              <div>
+                <a href="https://twitter.com/isaacdpierce">
+                  <Twitter />
+                </a>
+              </div>
             </SocialWrapper>
           </TextWrapper>
         </Card>

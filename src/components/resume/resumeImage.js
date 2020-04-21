@@ -4,18 +4,26 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
 
+const ResumeWrapper = styled.section`
+  grid-column: 1 / -1;
+  grid-row-gap: 200px;
+  margin-bottom: 200px;
+  display: flex;
+  justify-content: center;
+`
+
 const StyledImage = styled.div`
   display: flex;
-  width: 600px;
+  width: 70vw;
   flex-shrink: 0;
 `
 
 const ResumeImage = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "resume.jpg" }) {
+      file(relativePath: { eq: "resume.png" }) {
         childImageSharp {
-          fluid(maxWidth: 600) {
+          fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -23,18 +31,15 @@ const ResumeImage = () => {
     }
   `)
 
-  console.log(data.file)
-
   return (
-    <>
-      <StyledImage sx={{ mr: 4 }}>
-        HELLO
+    <ResumeWrapper>
+      <StyledImage>
         <Img
           style={{ width: "100%" }}
           fluid={data.file.childImageSharp.fluid}
         />
       </StyledImage>
-    </>
+    </ResumeWrapper>
   )
 }
 

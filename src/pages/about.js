@@ -1,4 +1,7 @@
+/** @jsx jsx */
 import React from "react"
+import { jsx } from "theme-ui"
+import styled from "@emotion/styled"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout/layout"
@@ -33,18 +36,29 @@ const valuesParsArray = [
   "I enjoy my comfort zones and push myself to experience new things. I respect traditional values while remaining open to new and better ways. I lean on trusted and proven methods while expecting innovation and evolution.",
 ]
 
-const About = () => {
+const AboutWrapper = styled.section`
+  grid-column: 1 / -1;
+  display: grid;
+  align-content: start;
+  justify-content: center;
+  grid-template-columns: 1fr 200px 1fr;
+  min-height: calc(100vh - 70px);
+`
+
+const About = ({ location }) => {
   const valuesList = valuesArray.map(value => <li key={value}>{value}</li>)
   const valuesParagraphs = valuesParsArray.map(par => <li key={par}>{par}</li>)
   return (
-    <Layout>
+    <Layout path={location.pathname}>
       <SEO title="About Isaac Pierce" />
-      <AnimatedListTextBox align="right" color="dark" startAnimation="left">
-        {valuesList}
-      </AnimatedListTextBox>
-      <AnimatedListTextBox color="light" startAnimation="right">
-        {valuesParagraphs}
-      </AnimatedListTextBox>
+      <AboutWrapper sx={{ pb: 6 }}>
+        <AnimatedListTextBox color="dark" side="left">
+          {valuesParagraphs}
+        </AnimatedListTextBox>
+        <AnimatedListTextBox color="light" side="right">
+          {valuesList}
+        </AnimatedListTextBox>
+      </AboutWrapper>
     </Layout>
   )
 }

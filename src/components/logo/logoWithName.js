@@ -34,7 +34,7 @@ export default () => {
             margin: 0,
           }}
         >
-          {title}
+          <span>{title}</span>
         </h1>
       </Link>
     </StyledLogo>

@@ -20,14 +20,14 @@ const StyledHeader = styled.header`
   box-shadow: 0 1px 1px 1px #00000015;
 `
 
-const Header = () => {
+const Header = ({ path }) => {
   return (
     <StyledHeader
       sx={{
         backgroundColor: "white",
       }}
     >
-      <MainNav />
+      <MainNav path={path} />
     </StyledHeader>
   )
 }

@@ -11,7 +11,6 @@ import Layout from "../components/layout/layout"
 
 const StyledPortfolioSection = styled.section`
   grid-column: 1 / -1;
-  grid-row: 2 / -1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,21 +18,30 @@ const StyledPortfolioSection = styled.section`
 
 const StyledPortfolioCard = styled.section``
 
-const Portfolios = ({ data }) => {
+const Portfolios = ({ data, location }) => {
   const { edges: projects } = data.allProjectsJson
 
   return (
-    <Layout>
+    <Layout path={location.pathname}>
       <SEO title="The Portfolio of Isaac Pierce" />
       <StyledPortfolioSection>
         <Timeline />
         {projects.map(({ node: project }, index) => {
-          const { title, description, date, link, tech, url, github } = project
+          const {
+            id,
+            title,
+            description,
+            date,
+            link,
+            tech,
+            url,
+            github,
+          } = project
           const image = project.image.childImageSharp.fluid
 
           return (
             <DisplayCard
-              key={title}
+              key={id}
               title={title}
               description={description}
               image={image}
@@ -58,6 +66,7 @@ export const projectQuery = graphql`
     allProjectsJson {
       edges {
         node {
+          id
           title
           description
           tech

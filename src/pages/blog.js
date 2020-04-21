@@ -9,16 +9,15 @@ import PostsList from "../components/layout/posts-list-layout"
 
 const StyledPostSection = styled.section`
   grid-column: 1 / -1;
-  grid-row: 2 / -1;
   display: flex;
   justify-content: center;
 `
 
-const BlogIndex = ({ data }) => {
+const BlogIndex = ({ data, location }) => {
   const { edges: posts } = data.allMdx
 
   return (
-    <Layout>
+    <Layout path={location.pathname}>
       <StyledPostSection sx={{ my: 1 }}>
         <PostsList posts={posts} />
       </StyledPostSection>

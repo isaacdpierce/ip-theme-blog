@@ -24,21 +24,27 @@ const MainGrid = styled.main`
   width: 100vw;
   display: grid;
   grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: 90px 1fr;
+  grid-template-rows: 1fr;
+  transform: translate3d(
+    0,
+    0,
+    0
+  ); /* this makes the sticky footer work on Safari*/
 `
 
-const Layout = ({ children }) => {
+const Layout = ({ children, path }) => {
   const { title, siteUrl } = useSiteMetaData()
 
   return (
     <>
       <LayoutGrid>
         <GlobalStyles />
-        <Header />
+        <Header path={path} />
         <Hero />
-        <MainGrid>{children}</MainGrid>
+        <MainGrid sx={{ pt: 5 }}>{children}</MainGrid>
+        <Footer siteTitle={title} siteUrl={siteUrl} />
       </LayoutGrid>
-      <Footer siteTitle={title} siteUrl={siteUrl} />
+      <div id="contact"></div>
     </>
   )
 }

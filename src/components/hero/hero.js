@@ -10,6 +10,11 @@ const StyledHero = styled.section`
   display: flex;
   z-index: -1;
   box-shadow: 0 1px 2px 2px #00000025;
+  transform: translate3d(
+    0,
+    0,
+    0
+  ); /* this makes the sticky footer work on Safari*/
 `
 
 const StyledLeft = styled.div`

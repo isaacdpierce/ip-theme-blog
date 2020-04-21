@@ -6,23 +6,22 @@ import styled from "@emotion/styled"
 import { getStart } from "../../helpers/helpers"
 
 const StyledListTextBox = styled(motion.ul)`
-  grid-column: ${props =>
-    props.startAnimation === "left" ? "1 / 9" : "9 / -1"};
-  grid-row: 1 / -1;
+  grid-column: ${props => (props.side === "left" ? 1 : 3)};
+  justify-self: ${props => (props.side === "left" ? "end" : "start")};
+  max-width: 35vw;
 `
 
 const ListTextBox = props => {
-  const { children, align, color, startAnimation } = props
+  const { children, align, color, side } = props
   return (
     <StyledListTextBox
       {...props}
-      initial={{ opacity: 0, x: getStart(startAnimation, 500) }}
+      initial={{ opacity: 0, x: getStart(side, 500) }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ ease: "easeOut", duration: 1 }}
       sx={{
-        textAlign: `${align}`,
-        py: 5,
-        px: 6,
+        textAlign: `${side === "left" ? "right" : "left"}`,
+        m: 0,
         fontSize: 3,
         letterSpacing: "body",
         color: `text.${color}`,

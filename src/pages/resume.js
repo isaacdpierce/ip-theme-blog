@@ -15,11 +15,15 @@ const StyledImage = styled.div`
   flex-shrink: 0;
 `
 
-const Resume = () => {
+const Resume = ({ location }) => {
   return (
-    <Layout>
+    <Layout path={location.pathname}>
       <SEO title="Isaac Pierce Resume" />
       <ResumeImage />
+      <a href={resume} download>
+        Click here to download
+      </a>
+      {/* <div id="contact"></div> */}
     </Layout>
   )
 }

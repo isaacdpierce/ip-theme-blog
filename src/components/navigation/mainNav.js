@@ -3,6 +3,7 @@ import { jsx } from "theme-ui"
 import React from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 import Logo from "../logo/logoWithName"
 
@@ -14,7 +15,7 @@ const StyledNavMenu = styled.div`
   text-align: center;
 `
 
-const mainNav = () => {
+const mainNav = ({ path }) => {
   return (
     <StyledNavMenu
       sx={{
@@ -30,7 +31,8 @@ const mainNav = () => {
       <Link to="/portfolio/">portfolio</Link>
       <Logo />
       <Link to="/resume/">resume</Link>
-      <Link to="/blog/">blog</Link>
+
+      <AnchorLink to={`${path}#contact`}>contact</AnchorLink>
     </StyledNavMenu>
   )
 }
