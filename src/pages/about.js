@@ -51,13 +51,11 @@ const About = ({ location }) => {
   return (
     <Layout path={location.pathname}>
       <SEO title="About Isaac Pierce" />
-      <AboutWrapper sx={{ pb: 6 }}>
-        <AnimatedListTextBox color="dark" side="left">
+      <AboutWrapper sx={{ pt: 4, pb: 6 }}>
+        <AnimatedListTextBox side="left">
           {valuesParagraphs}
         </AnimatedListTextBox>
-        <AnimatedListTextBox color="light" side="right">
-          {valuesList}
-        </AnimatedListTextBox>
+        <AnimatedListTextBox side="right">{valuesList}</AnimatedListTextBox>
       </AboutWrapper>
     </Layout>
   )

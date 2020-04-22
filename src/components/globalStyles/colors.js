@@ -20,6 +20,7 @@ const colors = {
   secondary: "#7279B6",
   accent: "#B569C2",
   muted: "#f1f3f4",
+  transparent: "#ffffff00",
 }
 
 export default colors

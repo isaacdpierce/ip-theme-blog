@@ -28,7 +28,7 @@ const mainNav = ({ path }) => {
       }}
     >
       <Link to="/about/">about</Link>
-      <Link to="/portfolio/">portfolio</Link>
+      <Link to="/">portfolios</Link>
       <Logo />
       <Link to="/resume/">resume</Link>
 

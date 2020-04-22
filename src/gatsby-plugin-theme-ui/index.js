@@ -1,6 +1,7 @@
 import colors from "../components/globalStyles/colors"
 export default {
-  space: [0, 3, 9, 15, 30, 63, 129, 255, 360, 510],
+  space: [0, 3, 9, 15, 30, 63, 72, 81, 96, 120, 140, 180, 200, 300],
+  breakpoints: ["288px", "608px", "1024px", "1504px"],
   fonts: {
     body: `Gothic A1, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif`,
     heading: `Merriweather, system-ui, serif`,

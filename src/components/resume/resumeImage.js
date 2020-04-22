@@ -4,17 +4,11 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
 
-const ResumeWrapper = styled.section`
-  grid-column: 1 / -1;
-  grid-row-gap: 200px;
-  margin-bottom: 200px;
-  display: flex;
-  justify-content: center;
-`
-
 const StyledImage = styled.div`
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
   display: flex;
-  width: 70vw;
+  width: 100%;
   flex-shrink: 0;
 `
 
@@ -32,14 +26,9 @@ const ResumeImage = () => {
   `)
 
   return (
-    <ResumeWrapper>
-      <StyledImage>
-        <Img
-          style={{ width: "100%" }}
-          fluid={data.file.childImageSharp.fluid}
-        />
-      </StyledImage>
-    </ResumeWrapper>
+    <StyledImage>
+      <Img style={{ width: "100%" }} fluid={data.file.childImageSharp.fluid} />
+    </StyledImage>
   )
 }
 
