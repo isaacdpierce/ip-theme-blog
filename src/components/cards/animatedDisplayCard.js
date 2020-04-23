@@ -13,6 +13,7 @@ const StyledImage = styled.div`
   display: flex;
   width: 480px;
   flex-shrink: 0;
+  max-height: 240px;
 `
 
 const StyledContent = styled(motion.div)`
@@ -33,7 +34,7 @@ const DisplayCard = ({
   excerpt,
   index,
   url,
-  github,
+  code,
 }) => {
   const showTitleAndDate = () => {
     if (link) {
@@ -92,10 +93,10 @@ const DisplayCard = ({
             <a href={url}>Live</a>
           </span>
         )}
-        {github &&
-          github.map(link => (
+        {code &&
+          code.map(link => (
             <span>
-              <a href={link.url}>{link.type}</a>
+              <a href={link.url}>{link.source}</a>
             </span>
           ))}
       </div>

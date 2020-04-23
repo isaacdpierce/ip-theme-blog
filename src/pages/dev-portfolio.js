@@ -35,7 +35,7 @@ const Portfolios = ({ data, location }) => {
             link,
             tech,
             url,
-            github,
+            code,
           } = project
           const image = project.image.childImageSharp.fluid
 
@@ -50,7 +50,7 @@ const Portfolios = ({ data, location }) => {
               link={link}
               excerpt={tech}
               url={url}
-              github={github}
+              code={code}
             />
           )
         })}
@@ -72,8 +72,8 @@ export const projectQuery = graphql`
           tech
           date
           url
-          github {
-            type
+          code {
+            source
             url
           }
           image {

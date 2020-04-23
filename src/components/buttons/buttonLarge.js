@@ -22,7 +22,14 @@ const ButtonLarge = ({ children, to, side, animate }) => {
     <StyledButton
       initial={animate && { opacity: 0, y: "35vh" }}
       animate={animate && { opacity: 1, y: 0 }}
-      transition={animate && { duration: 1.5, ease: "easeOut", delay: 0.5 }}
+      transition={
+        animate && {
+          duration: 1.5,
+          ease: "easeOut",
+          delay: 0.5,
+          height: "50px",
+        }
+      }
       side={side}
       sx={{
         border: theme =>

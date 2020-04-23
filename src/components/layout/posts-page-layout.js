@@ -13,6 +13,7 @@ import Layout from "./layout"
 
 const PageWrapper = styled.section`
   grid-column: 1 / -1;
+  grid-row: 1 / -1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,18 +36,18 @@ export default function PageTemplate({ data: { mdx }, location }) {
 
   return (
     <Layout>
+      <SEO
+        title={title}
+        image={featuredImgFluid}
+        description={description}
+        pathname={location.pathname}
+      />
       <PageWrapper sx={{ backgroundColor: "white" }}>
-        <SEO
-          title={title}
-          image={featuredImgFluid}
-          description={description}
-          pathname={location.pathname}
-        />
-        <div>
+        <div sx={{ mt: "-70px" }}>
           <Img style={{ width: "100vw" }} fluid={featuredImgFluid} />
         </div>
-        <PostWrapper sx={{ backgroundColor: "primary", py: 5, px: 6 }}>
-          <h1 sx={{ m: 0 }}>{title}</h1>
+        <PostWrapper sx={{ backgroundColor: "background.light", py: 5, px: 6 }}>
+          <h2 sx={{ m: 0 }}>{title}</h2>
           <span
             sx={{
               fontSize: 0,

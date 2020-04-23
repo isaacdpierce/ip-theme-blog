@@ -1,81 +1,91 @@
 [
   {
-    "name": "beatscape",
-    "link": "/beatscape",
-    "title": "Beatscape Sound Animations",
-    "description": "Animated 3Dsoundscapes.",
-    "tech": "TECH: React, Node, PostgresQL, WebAudioAPI, Knex",
-    "image": "./beatscape.png",
-    "date": "2019",
-    "url": "https://beatscape.netlify.app/",
-    "github": [
-      { "type": "client", "url": "https://github.com/isaacdpierce/beatscape" },
-      {
-        "type": "server",
-        "url": "https://github.com/isaacdpierce/beatscape-server-knex"
-      }
-    ]
-  },
-  {
-    "name": "beatscape",
-    "link": "/beatscape",
-    "title": "Beatscape Sound",
-    "description": "Animated soundscapes.",
-    "tech": "TECH: React, Node, PostgresQL, WebAudioAPI, Knex",
-    "image": "./beatscape.png",
-    "date": "2019",
-    "url": "https://beatscape.netlify.app/",
-    "github": [
-      { "type": "client", "url": "https://github.com/isaacdpierce/beatscape" },
-      {
-        "type": "server",
-        "url": "https://github.com/isaacdpierce/beatscape-server-knex"
-      }
-    ]
-  },
-  {
-    "name": "beatscape",
-    "link": "/beatscape",
-    "title": "Beatscape S",
-    "description": "Animated soundscapes.",
-    "tech": "TECH: React, Node, PostgresQL, WebAudioAPI, Knex",
-    "image": "./beatscape.png",
-    "date": "2019",
-    "url": "https://beatscape.netlify.app/",
-    "github": [
-      { "type": "client", "url": "https://github.com/isaacdpierce/beatscape" },
-      {
-        "type": "server",
-        "url": "https://github.com/isaacdpierce/beatscape-server-knex"
-      }
-    ]
-  },
-  {
-    "name": "beatscape",
-    "link": "/beatscape",
-    "title": "Beatsmations",
-    "description": "Animated soundscapes.",
-    "tech": "TECH: React, Node, PostgresQL, WebAudioAPI, Knex",
-    "image": "../images/beatscape.png",
-    "date": "2019",
-    "url": "https://beatscape.netlify.app/",
-    "github": [
-      { "type": "client", "url": "https://github.com/isaacdpierce/beatscape" },
-      {
-        "type": "server",
-        "url": "https://github.com/isaacdpierce/beatscape-server-knex"
-      }
-    ]
-  },
-  {
-    "name": "beatscape",
-    "link": "/berryman",
-    "title": "Berry Brothers Meats",
-    "description": "Shopify E-commerce solution.",
-    "tech": "TECH: Shopify dashboard, liquid, Javascript, JQuery",
-    "image": "../images/berryman.png",
+    "name": "berryman",
+    "title": "Berry Brother's Meats",
+    "description": "Shopify E-commerce solution. Customized 3rd Party theme. Integrated apps. Designed and delivered successful email campaigns.",
+    "tech": "TECH:  HTML, CSS, liquid, Javascript, JQuery, Shopify dashboard, Omnisend.",
+    "image": "../images/projects/berryman.png",
     "date": "2019 - Present",
     "url": "https://berrymanfarms.ca/",
     "github": []
+  },
+  {
+    "name": "gatsby-theme-blog",
+    "title": "Gatsby Theme Blog ",
+    "description": "Gatsby theme. I built this custom theme to learn new theme features in Gatsby and to play with some page transition ideas.",
+    "tech": "TECH:  Gatsby, React, NetlifyCMS, MDX, ThemeUI, Typography.js, Emotion, and React Spring",
+    "image": "../images/projects/gatsby-theme-blog.png",
+    "date": "2019",
+    "url": "https://ip-blog1.netlify.app/",
+    "code": [
+      {
+        "source": "github",
+        "url": "https://github.com/isaacdpierce/design-rocket"
+      }
+    ]
+  },
+  {
+    "name": "gatsby-portfolio",
+    "title": "Gatsby Portfolio",
+    "description": "Gatsby portfolio site. A semantic Gatsby site with an MDX Blog.",
+    "tech": "TECH:  Gatsby, React, MDX and Styled Components",
+    "image": "../images/projects/gatsby-portfolio.png",
+    "date": "2019",
+    "url": "fill/with/new/address",
+    "code": [
+      {
+        "source": "github",
+        "url": "https://github.com/isaacdpierce/design-rocket"
+      }
+    ]
+  },
+  {
+    "name": "beatscape",
+    "title": "Beatscape Sound Animations",
+    "description": "Animated 3Dsoundscapes. Allows a user to control all levels in a music composition. Allows a user to animate the sound levels for a dynamic 3D listening experience.",
+    "tech": "TECH: JavaScript, React, Node, PostgresQL, WebAudioAPI, Knex.",
+    "image": "../images/projects/beatscape.png",
+    "date": "2019",
+    "url": "https://beatscape.netlify.app/",
+    "code": [
+      {
+        "source": "client",
+        "url": "https://github.com/isaacdpierce/beatscape"
+      },
+      {
+        "source": "server",
+        "url": "https://github.com/isaacdpierce/beatscape-server-knex"
+      }
+    ]
+  },
+  {
+    "name": "design-rocket",
+    "title": "Design Rocket",
+    "description": "A dashboard app to centralize design tools. Using 3rd-party API data with JS fetch.",
+    "tech": "TECH: Semantic HTML, CSS, Javascript, jQuery, fetch API.",
+    "image": "../images/projects/design-rocket.png",
+    "date": "2019",
+    "url": "https://design-rocket.netlify.app/",
+    "code": [
+      {
+        "source": "github",
+        "url": "https://github.com/isaacdpierce/design-rocket"
+      }
+    ]
+  },
+  {
+    "name": "event-app",
+    "title": "Event App",
+    "description": "A simple event app built with create-react-app and a few react animation libraries.",
+    "tech": "TECH: Semantic HTML, CSS, Javascript, Create React App, react-reveal, react-scroll, react-slick.",
+    "image": "../images/projects/event-app.png",
+    "date": "2018",
+    "url": "https://ip-event-app.netlify.app/",
+    "code": [
+      {
+        "source": "github",
+        "url": "https://github.com/isaacdpierce/design-rocket"
+      }
+    ]
   }
 ]

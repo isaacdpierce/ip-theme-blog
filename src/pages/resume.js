@@ -1,9 +1,6 @@
 /** @jsx jsx */
 import React from "react"
 import { jsx } from "theme-ui"
-import { css, keyframes } from "@emotion/core"
-import { Link } from "gatsby"
-import { motion } from "framer-motion"
 
 import ResumeImage from "../components/resume/resumeImage"
 import styled from "@emotion/styled"
@@ -14,22 +11,21 @@ import SEO from "../components/seo"
 
 const ResumeWrapper = styled.section`
   grid-column: 3 / 15;
+  grid-row: 1;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 400px 1fr;
 `
 
 const ButtonWrapper = styled.div`
-  will-change: transform;
   position: sticky;
-  top: 25%;
-  grid-column: 1 / -1;
-  grid-row: 1 / span 1;
-  justify-self: start;
+  top: 18%;
+  grid-column: 1 / 3;
+  grid-row: 1;
+  justify-self: center;
   align-self: start;
   z-index: 2;
   line-height: 1;
-  transform: translate(-125px, -50px);
   border-radius: 50%;
 `
 
@@ -37,10 +33,10 @@ const Resume = ({ location }) => {
   return (
     <Layout path={location.pathname}>
       <SEO title="Isaac Pierce Resume" />
+      <ButtonWrapper>
+        <ButtonDownload />
+      </ButtonWrapper>
       <ResumeWrapper sx={{ mb: 6 }}>
-        <ButtonWrapper>
-          <ButtonDownload />
-        </ButtonWrapper>
         <ResumeImage />
       </ResumeWrapper>
     </Layout>

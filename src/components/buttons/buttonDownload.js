@@ -1,33 +1,22 @@
 /** @jsx jsx */
 import React from "react"
 import { jsx } from "theme-ui"
-import { css, keyframes } from "@emotion/core"
+import { motion } from "framer-motion"
 
 import resume from "../../images/resume.pdf"
 import DownLoadSVG from "./downloadSVG"
 
-// Had to use keyframes because motion cancels transform translate.
-const rotate = keyframes`
- 0% {
-   transform: rotate(0deg)
- }
- 100% {
-   transform: rotate(360deg)
- }
-`
-
 const buttonDowload = () => {
   return (
-    <a
+    <motion.a
       style={{ display: "block" }}
       href={resume}
       download
-      css={css`
-        animation: ${rotate} 12s infinite linear;
-      `}
+      animate={{ rotate: 360 }}
+      transition={{ duration: 12, loop: Infinity, ease: "linear" }}
     >
       <DownLoadSVG />
-    </a>
+    </motion.a>
   )
 }
 
