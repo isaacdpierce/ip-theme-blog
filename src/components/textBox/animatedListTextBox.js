@@ -17,13 +17,13 @@ const ListTextBox = ({ children, side }) => {
       side={side}
       initial={{ x: "-100vw", y: "100vw", scale: 24 }}
       animate={{ x: 0, y: 0, scale: 1 }}
-      transition={{ ease: "easeInOut", duration: 3, delay: 0.2 }}
+      transition={{ ease: "easeInOut", duration: 3 }}
       sx={{
         textAlign: `${side === "left" ? "right" : "left"}`,
         m: 0,
         fontSize: 3,
         letterSpacing: "body",
-        color: `text.${side === "left" ? "dark" : "light"}`,
+        color: `${side === "left" ? "black" : "white"}`,
         lineHeight: 1.3,
       }}
     >

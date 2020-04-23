@@ -57,7 +57,7 @@ const IndexPage = ({ location }) => {
             I build, scale and maintain dynamic e&#8209;commerce experiences for
             bricks and mortar retailers.
           </TextBox>
-          <Button to="ecomPortfolio" side="left" animate>
+          <Button to="ecom-portfolio" side="left" animate>
             <motion.span
               sx={{ mb: 1, mr: 1 }}
               animate={{ x: -7 }}
@@ -77,7 +77,7 @@ const IndexPage = ({ location }) => {
             I build JAMstack websites and apps with React, Node, PostgresQL,
             GraphQL, and Gatsby.
           </TextBox>
-          <Button to="devPortfolio" side="right" animate>
+          <Button to="dev-portfolio" side="right" animate>
             Developer Portfolio{" "}
             <motion.span
               sx={{ mb: 1, ml: 1 }}
