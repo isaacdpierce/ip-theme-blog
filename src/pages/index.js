@@ -21,6 +21,8 @@ const HeadlineWrapper = styled.section`
   grid-column: 1 / -1;
   display: grid;
   align-content: start;
+  justify-content: center;
+  align-items: center;
   grid-row-gap: 50px;
   grid-template-columns: 1fr 15vw 1fr;
   min-height: calc(100vh - 70px);
@@ -93,20 +95,6 @@ const IndexPage = ({ location }) => {
           </Button>
         </TextBoxWrapper>
       </HeadlineWrapper>
-
-      {/* <HeadlineWrapper>
-        <AnimatedTextBox color="dark" side="left">
-          I build and maint######ain <br></br>dynamic e-commerce experiences{" "}
-          <br></br>
-          for bricks and mortar <br></br>retailers.
-        </AnimatedTextBox>
-
-        <AnimatedTextBox color="light" side="right">
-          I build JAMstacXXXXXXXk <br></br>websites and apps with <br></br>
-          React, Node,
-          <br></br>PostgresQL, GraphQL, <br></br>and Gatsby.
-        </AnimatedTextBox>
-      </HeadlineWrapper> */}
     </Layout>
   )
 }

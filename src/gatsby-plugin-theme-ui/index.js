@@ -1,13 +1,41 @@
-import colors from "../components/globalStyles/colors"
+export const colors = {
+  text: {
+    light: "#D6DEE7",
+    medium: "#363636",
+    dark: "hsla(0, 0%, 0%, 0.8)",
+  },
+
+  background: {
+    light: "#D6DEE7",
+    dark: "#363636",
+  },
+  links: {
+    light: "#969960",
+    dark: "#6a6e29",
+  },
+  white: "#fefefe",
+  black: "#161616",
+  darkGrey: "#242424",
+  primary: "#969960",
+  secondary: "#7279B6",
+  accent: "#B569C2",
+  muted: "#f1f3f4",
+  transparent: "#ffffff00",
+}
+
+export const fonts = {
+  body: `Gothic A1, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+  sans-serif`,
+  heading: `Merriweather, system-ui, serif`,
+  logo: `Cormorant Garamond`,
+  monospace: `Fira Code, monospace`,
+}
+
 export default {
   space: [0, 3, 9, 15, 30, 63, 72, 81, 96, 120, 140, 180, 200, 300],
-  breakpoints: ["288px", "608px", "1024px", "1504px"],
-  fonts: {
-    body: `Gothic A1, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif`,
-    heading: `Merriweather, system-ui, serif`,
-    logo: `Cormorant Garamond`,
-    monospace: `Fira Code, monospace`,
-  },
+  breakpoints: ["40em", "52em", "64em"],
+  fonts,
   fontSizes: [9, 12, 15, 18, 21, 24, 33, 48, 63, 96],
   fontWeights: {
     light: 100,

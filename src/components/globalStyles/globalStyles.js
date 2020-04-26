@@ -1,13 +1,13 @@
 import React from "react"
 import { Global, css } from "@emotion/core"
-import colors from "./colors"
+import { colors, fonts } from "../../gatsby-plugin-theme-ui/index"
 
 export default () => {
   return (
     <Global
       styles={css`
         html {
-          font-family: sans-serif;
+          font-family: ${fonts.body};
           -ms-text-size-adjust: 100%;
           -webkit-text-size-adjust: 100%;
           scroll-behavior: smooth;
@@ -243,9 +243,7 @@ export default () => {
           padding-top: 0;
           margin-bottom: 1.45rem;
           color: inherit;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
+          font-family: ${fonts.heading};
           font-weight: bold;
           text-rendering: optimizeLegibility;
           font-size: 2.25rem;
@@ -261,9 +259,7 @@ export default () => {
           padding-top: 0;
           margin-bottom: 1.45rem;
           color: inherit;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
+          font-family: ${fonts.heading};
           font-weight: bold;
           text-rendering: optimizeLegibility;
           font-size: 1.62671rem;
@@ -279,9 +275,7 @@ export default () => {
           padding-top: 0;
           margin-bottom: 1.45rem;
           color: inherit;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
+          font-family: ${fonts.heading};
           font-weight: bold;
           text-rendering: optimizeLegibility;
           font-size: 1.38316rem;
@@ -297,9 +291,7 @@ export default () => {
           padding-top: 0;
           margin-bottom: 1.45rem;
           color: inherit;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
+          font-family: ${fonts.heading};
           font-weight: bold;
           text-rendering: optimizeLegibility;
           font-size: 1rem;
@@ -315,9 +307,7 @@ export default () => {
           padding-top: 0;
           margin-bottom: 1.45rem;
           color: inherit;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
+          font-family: ${fonts.heading};
           font-weight: bold;
           text-rendering: optimizeLegibility;
           font-size: 0.85028rem;
@@ -333,9 +323,7 @@ export default () => {
           padding-top: 0;
           margin-bottom: 1.45rem;
           color: inherit;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
+          font-family: ${fonts.heading};
           font-weight: bold;
           text-rendering: optimizeLegibility;
           font-size: 0.78405rem;

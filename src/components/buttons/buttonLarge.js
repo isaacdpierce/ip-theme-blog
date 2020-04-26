@@ -14,6 +14,10 @@ const StyledButton = styled(motion.div)`
     display: flex;
     justify-content: center;
     align-items: center;
+    :hover {
+      box-shadow: inset 0 0 9px #969960;
+      transition: box-shadow 0.5s ease;
+    }
   }
 `
 

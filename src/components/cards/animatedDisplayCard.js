@@ -40,14 +40,14 @@ const DisplayCard = ({
     if (link) {
       return (
         <Link to={link}>
-          <h3>{title}</h3>
+          <h2>{title}</h2>
           <span>{date}</span>
         </Link>
       )
     } else {
       return (
         <>
-          <h3>{title}</h3>
+          <h2>{title}</h2>
           <span>{date}</span>
         </>
       )
@@ -71,7 +71,8 @@ const DisplayCard = ({
       </StyledImage>
       <div
         sx={{
-          h3: {
+          h2: {
+            fontSize: 2,
             color: `text.${isEven(index) ? "light" : "dark"}`,
             m: 0,
           },

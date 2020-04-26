@@ -42,7 +42,7 @@ const Layout = ({ children, path }) => {
         <GlobalStyles />
         <Header path={path} />
         <Hero />
-        <MainGrid sx={{ pt: [2, 3, 4], px: [3, 4, 5] }}>{children}</MainGrid>
+        <MainGrid>{children}</MainGrid>
         <Footer siteTitle={title} siteUrl={siteUrl} />
       </LayoutGrid>
       <div id="contact"></div>
