@@ -4,6 +4,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { colors } from "../../gatsby-plugin-theme-ui/index"
 
 import Logo from "../logo/logoWithName"
 
@@ -13,6 +14,15 @@ const StyledNavMenu = styled.div`
   justify-content: space-around;
   align-items: center;
   text-align: center;
+  will-change: color;
+  .nav-link {
+    transition: all 0.5s ease;
+    &:hover {
+      color: ${colors.links.dark};
+      text-shadow: 0 0 1px ${colors.links.dark};
+      letter-spacing: 0.5px;
+    }
+  }
 `
 
 const mainNav = ({ path }) => {
@@ -23,16 +33,24 @@ const mainNav = ({ path }) => {
           fontFamily: "body",
           color: "text.medium",
           fontSize: 2,
-          width: "120px",
+          width: "130px",
         },
       }}
     >
-      <Link to="/about/">about</Link>
-      <Link to="/">portfolios</Link>
+      <Link className="nav-link" to="/about/">
+        about
+      </Link>
+      <Link className="nav-link" to="/">
+        portfolios
+      </Link>
       <Logo />
-      <Link to="/resume/">resume</Link>
+      <Link className="nav-link" to="/resume/">
+        resume
+      </Link>
 
-      <AnchorLink to={`${path}#contact`}>contact</AnchorLink>
+      <AnchorLink className="nav-link" to={`${path}#contact`}>
+        contact
+      </AnchorLink>
     </StyledNavMenu>
   )
 }

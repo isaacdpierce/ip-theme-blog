@@ -25,6 +25,31 @@ const StyledContent = styled(motion.div)`
   max-width: 75vw;
 `
 
+const StyledTitle = styled(motion.span)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h2 {
+    display: inline-block;
+  }
+  text-transform: uppercase;
+`
+
+const StyledText = styled(motion.span)`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`
+
+const StyledLink = styled(motion.span)`
+  text-transform: uppercase;
+  border: 1px solid #6a6e29;
+  border-radius: 2px;
+  :hover {
+    box-shadow: inset 0 0 3px #6a6e29;
+  }
+`
+
 const DisplayCard = ({
   title,
   image,
@@ -39,17 +64,19 @@ const DisplayCard = ({
   const showTitleAndDate = () => {
     if (link) {
       return (
-        <Link to={link}>
-          <h2>{title}</h2>
-          <span>{date}</span>
-        </Link>
+        <StyledTitle>
+          <Link to={link}>
+            <h2>{title}</h2>
+            <span>{date}</span>
+          </Link>
+        </StyledTitle>
       )
     } else {
       return (
-        <>
+        <StyledTitle>
           <h2>{title}</h2>
           <span>{date}</span>
-        </>
+        </StyledTitle>
       )
     }
   }
@@ -69,17 +96,16 @@ const DisplayCard = ({
       <StyledImage sx={{ mr: 4 }}>
         <Img style={{ width: "100%" }} fluid={image} />
       </StyledImage>
-      <div
+      <StyledText
         sx={{
           h2: {
-            fontSize: 2,
+            fontSize: 3,
             color: `text.${isEven(index) ? "light" : "dark"}`,
+            fontFamily: "body",
             m: 0,
           },
-          span: {
+          a: {
             color: `links.${isEven(index) ? "light" : "dark"}`,
-            textTransform: "uppercase",
-            mr: 3,
           },
           p: {
             m: 0,
@@ -89,18 +115,20 @@ const DisplayCard = ({
         {showTitleAndDate()}
         {excerpt && <p>{excerpt}</p>}
         {description && <p>{description}</p>}
-        {url && (
-          <span>
-            <a href={url}>Live</a>
-          </span>
-        )}
-        {code &&
-          code.map(link => (
-            <span>
-              <a href={link.url}>{link.source}</a>
-            </span>
-          ))}
-      </div>
+        <div>
+          {url && (
+            <StyledLink sx={{ pt: 1, px: 2, mr: 3 }}>
+              <a href={url}>Live</a>
+            </StyledLink>
+          )}
+          {code &&
+            code.map(link => (
+              <StyledLink sx={{ pt: 1, px: 2, mr: 3 }}>
+                <a href={link.url}>{link.source}</a>
+              </StyledLink>
+            ))}
+        </div>
+      </StyledText>
     </StyledContent>
   )
 }
@@ -114,7 +142,7 @@ DisplayCard.propTypes = {
   excerpt: PropTypes.string,
   index: PropTypes.number.isRequired,
   url: PropTypes.string,
-  github: PropTypes.array,
+  code: PropTypes.array,
 }
 
 export default DisplayCard

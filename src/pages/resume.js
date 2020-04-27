@@ -33,10 +33,10 @@ const Resume = ({ location }) => {
   return (
     <Layout path={location.pathname}>
       <SEO title="Isaac Pierce Resume" />
-      <ButtonWrapper>
+      <ButtonWrapper sx={{ pt: 4 }}>
         <ButtonDownload />
       </ButtonWrapper>
-      <ResumeWrapper sx={{ mb: 6 }}>
+      <ResumeWrapper sx={{ my: 6 }}>
         <ResumeImage />
       </ResumeWrapper>
     </Layout>

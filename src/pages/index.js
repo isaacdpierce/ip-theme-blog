@@ -20,9 +20,8 @@ const SignWrapper = styled(motion.div)`
 const HeadlineWrapper = styled.section`
   grid-column: 1 / -1;
   display: grid;
-  align-content: start;
+  align-content: center;
   justify-content: center;
-  align-items: center;
   grid-row-gap: 50px;
   grid-template-columns: 1fr 15vw 1fr;
   min-height: calc(100vh - 70px);
@@ -45,9 +44,8 @@ const IndexPage = ({ location }) => {
     <Layout path={location.pathname}>
       <SEO title={title} description={description} keywords={keywords} />
 
-      <HeadlineWrapper>
+      <HeadlineWrapper sx={{ pb: 9 }}>
         <SignWrapper
-          sx={{ py: [1, 0] }}
           initial={{ opacity: 0, y: -200 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", mass: 0.7, delay: 0.5 }}
@@ -55,7 +53,7 @@ const IndexPage = ({ location }) => {
           <Sign />
         </SignWrapper>
         <TextBoxWrapper side="left">
-          <TextBox side="left" animate>
+          <TextBox sx={{ mb: 4 }} side="left" animate>
             I build, scale and maintain dynamic e&#8209;commerce experiences for
             bricks and mortar retailers.
           </TextBox>
@@ -75,7 +73,7 @@ const IndexPage = ({ location }) => {
           </Button>
         </TextBoxWrapper>
         <TextBoxWrapper side="right">
-          <TextBox side="right" animate>
+          <TextBox sx={{ mb: 4 }} side="right" animate>
             I build JAMstack websites and apps with React, Node, PostgresQL,
             GraphQL, and Gatsby.
           </TextBox>

@@ -12,7 +12,7 @@
   {
     "name": "gatsby-theme-blog",
     "title": "Gatsby Theme Blog ",
-    "description": "Gatsby theme. I built this custom theme to learn new theme features in Gatsby and to play with some page transition ideas.",
+    "description": "I built this custom theme to learn new theme features in Gatsby and to play with some page transition ideas.",
     "tech": "TECH:  Gatsby, React, NetlifyCMS, MDX, ThemeUI, Typography.js, Emotion, and React Spring",
     "image": "../images/projects/gatsby-theme-blog.png",
     "date": "2019",

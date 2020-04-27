@@ -2,7 +2,6 @@
 import React from "react"
 import { jsx } from "theme-ui"
 import styled from "@emotion/styled"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout/layout"
 import AnimatedListTextBox from "../components/textBox/animatedListTextBox"
@@ -51,7 +50,7 @@ const About = ({ location }) => {
   return (
     <Layout path={location.pathname}>
       <SEO title="About Isaac Pierce" />
-      <AboutWrapper sx={{ pt: 4, pb: 6 }}>
+      <AboutWrapper>
         <AnimatedListTextBox side="left">
           {valuesParagraphs}
         </AnimatedListTextBox>

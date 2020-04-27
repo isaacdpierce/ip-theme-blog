@@ -3,7 +3,6 @@ import React from "react"
 import { jsx } from "theme-ui"
 import { motion } from "framer-motion"
 import styled from "@emotion/styled"
-import { getStart } from "../../helpers/helpers"
 
 const StyledListTextBox = styled(motion.ul)`
   grid-column: ${({ side }) => (side === "left" ? 1 : 3)};
@@ -15,15 +14,29 @@ const ListTextBox = ({ children, side }) => {
   return (
     <StyledListTextBox
       side={side}
-      initial={{ x: "-100vw", y: "100vw", scale: 24 }}
-      animate={{ x: 0, y: 0, scale: 1 }}
-      transition={{ ease: "easeInOut", duration: 3 }}
+      initial={{
+        x: `${side === "left" ? "50vw" : "-50vw"}`,
+
+        color: "transparent",
+        textShadow: `0 0 10px ${side === "left" ? "black" : "white"}`,
+      }}
+      animate={{
+        x: 0,
+        textShadow: `0 0 0px ${side === "left" ? "black" : "white"}`,
+      }}
+      transition={{
+        type: "spring",
+        mass: 0.9,
+        damping: 15,
+        delay: 0.2,
+      }}
       sx={{
         textAlign: `${side === "left" ? "right" : "left"}`,
         m: 0,
+        py: 6,
         fontSize: 3,
         letterSpacing: "body",
-        color: `${side === "left" ? "black" : "white"}`,
+        color: `text.${side === "left" ? "medium" : "light"}`,
         lineHeight: 1.3,
       }}
     >

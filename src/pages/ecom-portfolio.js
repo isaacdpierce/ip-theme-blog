@@ -3,12 +3,10 @@ import { jsx } from "theme-ui"
 import React from "react"
 import styled from "@emotion/styled"
 import { graphql } from "gatsby"
-import DisplayCard from "../components/cards/animatedDisplayCard"
-import Timeline from "../components/timeline/timeline"
+
 import IllustrationOne from "../components/illustrations/illustrationOne"
 import IllustrationTwo from "../components/illustrations/illustrationTwo"
 import IllustrationThree from "../components/illustrations/illustrationThree"
-
 import SEO from "../components/seo"
 import Layout from "../components/layout/layout"
 
@@ -33,6 +31,9 @@ const StyledPortfolioSection = styled.section`
 const SquareTextBox = styled.div`
   height: 400px;
   width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border-radius: 6px;
 `
 
@@ -40,8 +41,6 @@ const StyledPortfolioCard = styled.section``
 
 const Portfolios = ({ data, location }) => {
   const { nodes: copy } = data.allCommerceCopyJson
-
-  console.log(copy)
 
   const textBoxes = copy.map((section, index) => {
     return (
@@ -55,6 +54,9 @@ const Portfolios = ({ data, location }) => {
               fontSize: 4,
               textTransform: "uppercase",
               letterSpacing: 1,
+            },
+            li: {
+              fontSize: 2,
             },
           }}
         >

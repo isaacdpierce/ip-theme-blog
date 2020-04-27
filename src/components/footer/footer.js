@@ -6,17 +6,15 @@ import PropTypes from "prop-types"
 import styled from "@emotion/styled"
 import Card from "../cards/smallCard"
 import ProfileImg from "../profile/profileImg"
-import Github from "../social/github"
-import Mail from "../social/mail"
-import LinkedIn from "../social/linkedIn"
-import Twitter from "../social/twitter"
+
+import Social from "../social/social"
 
 import RookLogo from "../logo/rookLogo"
 
 const StyledFooter = styled.footer`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 200px 50px;
+  grid-template-rows: 200px 1fr;
   position: sticky;
   bottom: 0;
   z-index: -99;
@@ -47,13 +45,6 @@ const TextWrapper = styled.div`
   }
 `
 
-const SocialWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-`
-
 const Footer = ({ siteUrl, siteTitle }) => {
   return (
     <StyledFooter
@@ -68,7 +59,7 @@ const Footer = ({ siteUrl, siteTitle }) => {
             <ProfileImg />
           </ImageWrapper>
           <TextWrapper sx={{ width: "70%" }}>
-            <h6 sx={{ mb: 1 }}>Work with me</h6>
+            <h6 sx={{ mb: 1, fontFamily: "body" }}>Work with me</h6>
             <p sx={{ m: 0 }}>
               I value honesty, integrity and clear communication. I govern a
               genuine desire to understand people and their needs. I'm
@@ -84,32 +75,8 @@ const Footer = ({ siteUrl, siteTitle }) => {
 
         <Card>
           <TextWrapper sx={{ width: "70%" }}>
-            <h6 sx={{ mb: 2 }}>Connect with me</h6>
-            <SocialWrapper>
-              <div>
-                <a href="mailto: hello@isaacpierce.io?Subject=Hi%20Isaac">
-                  <Mail />
-                </a>
-              </div>
-
-              <div>
-                <a href="https://github.com/isaacdpierce">
-                  <Github />
-                </a>
-              </div>
-
-              <div>
-                <a href="https://www.linkedin.com/in/isaacpierce/">
-                  <LinkedIn />
-                </a>
-              </div>
-
-              <div>
-                <a href="https://twitter.com/isaacdpierce">
-                  <Twitter />
-                </a>
-              </div>
-            </SocialWrapper>
+            <h6 sx={{ mb: 2, fontFamily: "body" }}>Connect with me</h6>
+            <Social />
           </TextWrapper>
         </Card>
       </ContentWrapper>

@@ -24,7 +24,7 @@ const Portfolios = ({ data, location }) => {
   return (
     <Layout path={location.pathname}>
       <SEO title="The Portfolio of Isaac Pierce" />
-      <StyledPortfolioSection>
+      <StyledPortfolioSection sx={{ py: 6 }}>
         <Timeline />
         {projects.map(({ node: project }, index) => {
           const {

@@ -13,8 +13,8 @@ const StyledLogo = styled.div`
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  height: 20px;
   line-height: 1;
+  display: inline;
 `
 
 export default () => {
@@ -25,17 +25,17 @@ export default () => {
         <Logo />
       </Link>
       <Link to="/">
-        <h1
+        <div
           sx={{
             color: "text.dark",
             fontFamily: "logo",
             fontSize: 3,
-            fontWeight: "heading",
+            fontWeight: "bold",
             margin: 0,
           }}
         >
-          <span>{title}</span>
-        </h1>
+          {title}
+        </div>
       </Link>
     </StyledLogo>
   )
