@@ -15,6 +15,7 @@ const StyledLogo = styled.div`
   text-transform: uppercase;
   line-height: 1;
   display: inline;
+  white-space: nowrap;
 `
 
 export default () => {
@@ -29,7 +30,7 @@ export default () => {
           sx={{
             color: "text.dark",
             fontFamily: "logo",
-            fontSize: 3,
+            fontSize: [1, 2, 3],
             fontWeight: "bold",
             margin: 0,
           }}
