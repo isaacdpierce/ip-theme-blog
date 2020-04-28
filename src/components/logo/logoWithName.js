@@ -16,6 +16,10 @@ const StyledLogo = styled.div`
   line-height: 1;
   display: inline;
   white-space: nowrap;
+  @media (max-width: 600px) {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
 `
 
 export default () => {
@@ -30,9 +34,10 @@ export default () => {
           sx={{
             color: "text.dark",
             fontFamily: "logo",
-            fontSize: [1, 2, 3],
+            fontSize: 3,
             fontWeight: "bold",
             margin: 0,
+            pb: [2, 0, 0],
           }}
         >
           {title}

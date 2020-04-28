@@ -10,11 +10,12 @@ import Logo from "../logo/logoWithName"
 
 const StyledNavMenu = styled.div`
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
   justify-content: space-around;
   align-items: center;
-  text-align: center;
   will-change: color;
+  text-align: center;
   .nav-link {
     transition: all 0.5s ease;
     &:hover {
@@ -22,6 +23,9 @@ const StyledNavMenu = styled.div`
       text-shadow: 0 0 1px ${colors.black};
       letter-spacing: 0.5px;
     }
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(4, auto);
   }
 `
 
@@ -33,7 +37,6 @@ const mainNav = ({ path }) => {
           fontFamily: "body",
           color: "text.medium",
           fontSize: 2,
-          width: "130px",
         },
       }}
     >

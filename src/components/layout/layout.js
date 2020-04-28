@@ -15,7 +15,7 @@ const LayoutGrid = styled.div`
   width: 100vw;
   display: grid;
   grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: 70px 1fr;
+  grid-template-rows: auto 1fr;
 `
 
 const MainGrid = styled.main`

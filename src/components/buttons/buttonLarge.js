@@ -43,7 +43,8 @@ const ButtonLarge = ({ children, to, side, animate }) => {
         a: {
           fontSize: [0, 1, 2],
           color: `links.${side === "left" ? "dark" : "light"}`,
-          p: [1, 2],
+          py: [1, 2],
+          px: 3,
         },
       }}
     >

@@ -13,8 +13,16 @@ import Button from "../components/buttons/buttonLarge"
 
 const SignWrapper = styled(motion.div)`
   grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
   transform: translateX(1px);
-  height: 20px;
+`
+
+const SignContainer = styled.div`
+  height: 30px;
+  @media (max-width: 640px) {
+    height: 15px;
+  }
 `
 
 const HeadlineWrapper = styled.section`
@@ -22,7 +30,7 @@ const HeadlineWrapper = styled.section`
   display: grid;
   align-content: center;
   justify-content: center;
-  grid-row-gap: 50px;
+  grid-row-gap: 30px;
   grid-template-columns: 1fr 15vw 1fr;
   min-height: calc(100vh - 70px);
 `
@@ -38,28 +46,30 @@ const TextBoxWrapper = styled(motion.div)`
 `
 
 const IndexPage = ({ location }) => {
-  const { title, siteUrl, description, keywords } = useSiteMetaData()
+  const { title, description, keywords } = useSiteMetaData()
 
   return (
     <Layout path={location.pathname}>
       <SEO title={title} description={description} keywords={keywords} />
 
-      <HeadlineWrapper sx={{ pb: 9 }}>
+      <HeadlineWrapper sx={{ pb: 9, px: 2 }}>
         <SignWrapper
           initial={{ opacity: 0, y: -200 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", mass: 0.7, delay: 0.5 }}
         >
-          <Sign />
+          <SignContainer sx={{}}>
+            <Sign />
+          </SignContainer>
         </SignWrapper>
         <TextBoxWrapper side="left">
-          <TextBox sx={{ mb: 4 }} side="left" animate>
+          <TextBox sx={{ mb: 4, fontSize: [3, 5, 6] }} side="left" animate>
             I build, scale and maintain dynamic e&#8209;commerce experiences for
             bricks and mortar retailers.
           </TextBox>
           <Button to="ecom-portfolio" side="left" animate>
             <motion.span
-              sx={{ mb: 1, mr: 1 }}
+              sx={{ mb: 1, mr: [0, 2] }}
               animate={{ x: -7 }}
               transition={{
                 yoyo: Infinity,
@@ -68,19 +78,19 @@ const IndexPage = ({ location }) => {
               }}
             >
               &#x21DA;
-            </motion.span>{" "}
+            </motion.span>
             E-commerce Portfolio
           </Button>
         </TextBoxWrapper>
         <TextBoxWrapper side="right">
-          <TextBox sx={{ mb: 4 }} side="right" animate>
+          <TextBox sx={{ mb: 4, fontSize: [3, 5, 6] }} side="right" animate>
             I build JAMstack websites and apps with React, Node, PostgresQL,
             GraphQL, and Gatsby.
           </TextBox>
           <Button to="dev-portfolio" side="right" animate>
-            Developer Portfolio{" "}
+            Developer Portfolio
             <motion.span
-              sx={{ mb: 1, ml: 1 }}
+              sx={{ mb: 1, ml: [0, 2] }}
               animate={{ x: 7 }}
               transition={{
                 yoyo: Infinity,

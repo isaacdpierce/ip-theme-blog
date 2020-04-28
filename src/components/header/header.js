@@ -10,10 +10,6 @@ import MainNav from "../navigation/mainNav"
 const StyledHeader = styled.header`
   grid-column: 1 / -1;
   grid-row: 1;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: sticky;
   top: 0;
   z-index: 99;
@@ -24,6 +20,7 @@ const Header = ({ path }) => {
   return (
     <StyledHeader
       sx={{
+        py: 2,
         backgroundColor: "white",
       }}
     >
