@@ -37,7 +37,7 @@ const StyledLine = styled(motion.div)`
   grid-row: 1;
   display: flex;
   justify-content: center;
-  z-index: 98;
+  z-index: 99;
   .line {
     width: 30%;
     height: 6px;

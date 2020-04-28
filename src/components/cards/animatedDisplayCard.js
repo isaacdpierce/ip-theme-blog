@@ -9,13 +9,6 @@ import PropTypes from "prop-types"
 
 import { Link } from "gatsby"
 
-const StyledImage = styled.div`
-  display: flex;
-  width: 480px;
-  flex-shrink: 0;
-  max-height: 240px;
-`
-
 const StyledContent = styled(motion.div)`
   display: flex;
   border-radius: 3px;
@@ -23,6 +16,22 @@ const StyledContent = styled(motion.div)`
   border-top: 1px solid #ffffff15;
   min-width: 60vw;
   max-width: 75vw;
+  @media (max-width: 1100px) {
+    min-width: 80vw;
+  }
+  @media (max-width: 950px) {
+    flex-direction: column;
+  }
+`
+
+const StyledImage = styled.div`
+  display: flex;
+  width: 480px;
+  flex-shrink: 0;
+  @media (max-width: 950px) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 `
 
 const StyledTitle = styled(motion.span)`
@@ -45,8 +54,12 @@ const StyledLink = styled(motion.span)`
   text-transform: uppercase;
   border: 1px solid #6a6e29;
   border-radius: 2px;
+  display: inline-block;
   :hover {
     box-shadow: inset 0 0 3px #6a6e29;
+  }
+  @media (max-width: 950px) {
+    margin-top: 10px;
   }
 `
 
@@ -67,7 +80,7 @@ const DisplayCard = ({
         <StyledTitle>
           <Link to={link}>
             <h2>{title}</h2>
-            <span>{date}</span>
+            <p>{date}</p>
           </Link>
         </StyledTitle>
       )
@@ -75,7 +88,7 @@ const DisplayCard = ({
       return (
         <StyledTitle>
           <h2>{title}</h2>
-          <span>{date}</span>
+          <p>{date}</p>
         </StyledTitle>
       )
     }
@@ -88,18 +101,18 @@ const DisplayCard = ({
       sx={{
         backgroundColor: `background.${isEven(index) ? "dark" : "light"}`,
         color: `text.${isEven(index) ? "light" : "dark"}`,
-        p: 4,
+        p: [2, 3, 4],
         mb: 5,
         fontFamily: "body",
       }}
     >
-      <StyledImage sx={{ mr: 4 }}>
+      <StyledImage sx={{ mr: [0, 0, 3] }}>
         <Img style={{ width: "100%" }} fluid={image} />
       </StyledImage>
       <StyledText
         sx={{
           h2: {
-            fontSize: 3,
+            fontSize: [1, 2, 3],
             color: `text.${isEven(index) ? "light" : "dark"}`,
             fontFamily: "body",
             m: 0,
@@ -109,6 +122,7 @@ const DisplayCard = ({
           },
           p: {
             m: 0,
+            fontSize: [1, 2, 3],
           },
         }}
       >
