@@ -8,7 +8,8 @@ const StyledCard = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150px;
+  height: 130px;
+  max-width: 95vw;
   width: 450px;
   border-radius: 3px;
   border-top: 1px solid #444;
@@ -21,7 +22,7 @@ const Card = ({ children }) => {
       sx={{
         backgroundColor: "background.dark",
         color: "text.light",
-        p: 4,
+        p: [2, 3, 4],
         fontSize: 1,
         lineHeight: "card",
       }}

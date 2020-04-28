@@ -46,7 +46,7 @@ const AboutWrapper = styled.section`
 
 const About = ({ location }) => {
   const valuesList = valuesArray.map(value => <li key={value}>{value}</li>)
-  const valuesParagraphs = valuesParsArray.map(par => <li key={par}>{par}</li>)
+  const valuesParagraphs = valuesParsArray.map(par => <p key={par}>{par}</p>)
   return (
     <Layout path={location.pathname}>
       <SEO title="About Isaac Pierce" />

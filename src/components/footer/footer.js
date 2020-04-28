@@ -14,29 +14,32 @@ import RookLogo from "../logo/rookLogo"
 const StyledFooter = styled.footer`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 200px 1fr;
+  grid-template-rows: 1fr 50px;
   position: sticky;
   bottom: 0;
-  z-index: -99;
   width: 100vw;
-  height: 250px;
 `
 
 const Copyright = styled.section`
   grid-column: 1 / -1;
   grid-row: 2;
-  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 `
 
 const ContentWrapper = styled.section`
-  grid-column: 2 / 12;
+  grid-column: 1 / 16;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
 `
 
 const ImageWrapper = styled.div`
-  width: 30%;
+  width: 100px;
 `
 
 const TextWrapper = styled.div`
@@ -50,12 +53,13 @@ const Footer = ({ siteUrl, siteTitle }) => {
     <StyledFooter
       sx={{
         backgroundColor: "darkGrey",
-        p: 2,
+        pt: 4,
+        px: 2,
       }}
     >
       <ContentWrapper>
         <Card>
-          <ImageWrapper sx={{ mr: 4 }}>
+          <ImageWrapper sx={{ mr: [2, 3, 4] }}>
             <ProfileImg />
           </ImageWrapper>
           <TextWrapper sx={{ width: "70%" }}>
@@ -63,14 +67,15 @@ const Footer = ({ siteUrl, siteTitle }) => {
             <p sx={{ m: 0 }}>
               I value honesty, integrity and clear communication. I govern a
               genuine desire to understand people and their needs. I'm
-              passionate, punctual, patient and professional. Being of service
-              to others makes me the happiest .
+              passionate, punctual, patient and professional.
             </p>
           </TextWrapper>
         </Card>
 
-        <div>
-          <RookLogo />
+        <div sx={{ p: 3 }}>
+          <Link to="/">
+            <RookLogo />
+          </Link>
         </div>
 
         <Card>
@@ -80,7 +85,7 @@ const Footer = ({ siteUrl, siteTitle }) => {
           </TextWrapper>
         </Card>
       </ContentWrapper>
-      <Copyright>
+      <Copyright sx={{ pb: 2 }}>
         <span>
           © {new Date().getFullYear()}, Built with Gatsby by{" "}
           <a href={siteUrl}> {siteTitle}</a>

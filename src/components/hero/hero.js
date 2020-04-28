@@ -8,7 +8,7 @@ const StyledHero = styled.section`
   grid-row: 2 / -1;
   min-height: calc(100vh - 70px);
   display: flex;
-  z-index: -1;
+  z-index: 1;
   box-shadow: 0 1px 2px 2px #00000025;
   transform: translate3d(
     0,

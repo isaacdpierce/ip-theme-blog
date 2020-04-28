@@ -24,6 +24,7 @@ const MainGrid = styled.main`
   grid-row: 2;
   width: 100vw;
   display: grid;
+  z-index: 3;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: 1fr;
   transform: translate3d(

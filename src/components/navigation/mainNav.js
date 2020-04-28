@@ -18,8 +18,8 @@ const StyledNavMenu = styled.div`
   .nav-link {
     transition: all 0.5s ease;
     &:hover {
-      color: ${colors.links.dark};
-      text-shadow: 0 0 1px ${colors.links.dark};
+      color: ${colors.black};
+      text-shadow: 0 0 1px ${colors.black};
       letter-spacing: 0.5px;
     }
   }
