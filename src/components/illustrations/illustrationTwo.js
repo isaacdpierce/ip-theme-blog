@@ -2,13 +2,7 @@ import React from "react"
 
 export default () => {
   return (
-    <svg
-      width="401"
-      height="401"
-      viewBox="0 0 401 401"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 401 401" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="0.18927" y="0.186157" width="400" height="400" fill="#D6DEE7" />
       <ellipse
         cx="125.782"

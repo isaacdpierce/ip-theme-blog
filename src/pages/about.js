@@ -40,7 +40,7 @@ const AboutWrapper = styled.section`
   display: grid;
   align-content: start;
   justify-content: center;
-  grid-template-columns: 1fr 200px 1fr;
+  grid-template-columns: 40vw 10vw 40vw;
   min-height: calc(100vh - 70px);
 `
 
@@ -50,7 +50,7 @@ const About = ({ location }) => {
   return (
     <Layout path={location.pathname}>
       <SEO title="About Isaac Pierce" />
-      <AboutWrapper>
+      <AboutWrapper sx={{ pt: [3, 4, 5] }}>
         <AnimatedListTextBox side="left">
           {valuesParagraphs}
         </AnimatedListTextBox>

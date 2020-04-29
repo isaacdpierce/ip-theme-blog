@@ -5,9 +5,16 @@ import { motion } from "framer-motion"
 import styled from "@emotion/styled"
 
 const StyledListTextBox = styled(motion.ul)`
-  grid-column: ${({ side }) => (side === "left" ? 1 : 3)};
-  justify-self: ${({ side }) => (side === "left" ? "end" : "start")};
-  max-width: 35vw;
+  grid-column: 1 / -1;
+  grid-row-gap: 50px;
+  justify-self: center;
+  max-width: 60vw;
+  text-align: left;
+  box-shadow: 0 0 6px #00000050;
+  border-radius: 3px;
+  @media (max-width: 650px) {
+    min-width: 90vw;
+  }
 `
 
 const ListTextBox = ({ children, side }) => {
@@ -15,10 +22,9 @@ const ListTextBox = ({ children, side }) => {
     <StyledListTextBox
       side={side}
       initial={{
-        x: `${side === "left" ? "50vw" : "-50vw"}`,
-
+        // x: `${side === "left" ? "100vw" : "-100vw"}`,
         color: "transparent",
-        textShadow: `0 0 10px ${side === "left" ? "black" : "white"}`,
+        textShadow: `0 0 15px ${side === "left" ? "black" : "white"}`,
       }}
       animate={{
         x: 0,
@@ -28,15 +34,16 @@ const ListTextBox = ({ children, side }) => {
         type: "spring",
         mass: 0.9,
         damping: 15,
-        delay: 0.2,
       }}
       sx={{
-        textAlign: `${side === "left" ? "right" : "left"}`,
-        m: 0,
-        py: 6,
-        fontSize: 3,
+        // textAlign: `${side === "left" ? "left" : "center"}`,
+        mb: 4,
+        ml: 0,
+        py: [5, 6],
+        px: [4, 5],
+        fontSize: [2, 3],
         letterSpacing: "body",
-        color: `text.${side === "left" ? "medium" : "light"}`,
+        backgroundColor: `${side === "left" ? "white" : "darkGrey"}`,
         lineHeight: 1.3,
       }}
     >

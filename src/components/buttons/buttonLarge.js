@@ -14,9 +14,16 @@ const StyledButton = styled(motion.div)`
     display: flex;
     justify-content: center;
     align-items: center;
+    justify-items: center;
     :hover {
       box-shadow: inset 0 0 9px #969960;
       transition: box-shadow 0.5s ease;
+    }
+  }
+  span {
+    display: inline-block;
+    @media (max-width: 650px) {
+      display: none;
     }
   }
 `
@@ -41,10 +48,10 @@ const ButtonLarge = ({ children, to, side, animate }) => {
             side === "left" ? theme.colors.links.dark : theme.colors.links.light
           }`,
         a: {
-          fontSize: [0, 1, 2],
+          fontSize: [1, 2],
           color: `links.${side === "left" ? "dark" : "light"}`,
           py: [1, 2],
-          px: 3,
+          px: [1, 2, 3],
         },
       }}
     >

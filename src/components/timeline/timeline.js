@@ -81,7 +81,6 @@ const Timeline = () => {
             index={index}
             sx={{
               fontFamily: "body",
-              fontSize: 3,
             }}
           >
             <StyledDate
@@ -117,8 +116,8 @@ const Timeline = () => {
               <motion.span
                 className="line"
                 sx={{ backgroundColor: "background.dark" }}
-                initial={{ y: "-110vw" }}
-                animate={{ y: 0 }}
+                initial={{ y: "-110vw", opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
                 transition={{
                   type: "spring",
                   mass: 0.4,
@@ -128,8 +127,8 @@ const Timeline = () => {
               <motion.span
                 className="line"
                 sx={{ backgroundColor: "background.light" }}
-                initial={{ y: "-110vh" }}
-                animate={{ y: 0 }}
+                initial={{ y: "-110vh", opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
                 transition={{
                   type: "spring",
                   mass: 0.4,
@@ -170,7 +169,7 @@ const Timeline = () => {
 
               <p
                 sx={{
-                  fontSize: 2,
+                  fontSize: [1, 2, 3],
                   mb: 0,
                 }}
               >

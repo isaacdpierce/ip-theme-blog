@@ -30,9 +30,12 @@ const HeadlineWrapper = styled.section`
   display: grid;
   align-content: center;
   justify-content: center;
-  grid-row-gap: 30px;
   grid-template-columns: 1fr 15vw 1fr;
-  min-height: calc(100vh - 70px);
+
+  @media (max-width: 360px) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 `
 
 const TextBoxWrapper = styled(motion.div)`
@@ -52,18 +55,19 @@ const IndexPage = ({ location }) => {
     <Layout path={location.pathname}>
       <SEO title={title} description={description} keywords={keywords} />
 
-      <HeadlineWrapper sx={{ pb: 9, px: 2 }}>
+      <HeadlineWrapper sx={{ pb: [7, 9], px: 2 }}>
         <SignWrapper
+          sx={{ pb: [4, 5] }}
           initial={{ opacity: 0, y: -200 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", mass: 0.7, delay: 0.5 }}
         >
-          <SignContainer sx={{}}>
+          <SignContainer>
             <Sign />
           </SignContainer>
         </SignWrapper>
         <TextBoxWrapper side="left">
-          <TextBox sx={{ mb: 4, fontSize: [3, 5, 6] }} side="left" animate>
+          <TextBox sx={{ mb: [4, 5], fontSize: [3, 5, 6] }} side="left" animate>
             I build, scale and maintain dynamic e&#8209;commerce experiences for
             bricks and mortar retailers.
           </TextBox>
@@ -83,7 +87,11 @@ const IndexPage = ({ location }) => {
           </Button>
         </TextBoxWrapper>
         <TextBoxWrapper side="right">
-          <TextBox sx={{ mb: 4, fontSize: [3, 5, 6] }} side="right" animate>
+          <TextBox
+            sx={{ mb: [4, 5], fontSize: [3, 5, 6] }}
+            side="right"
+            animate
+          >
             I build JAMstack websites and apps with React, Node, PostgresQL,
             GraphQL, and Gatsby.
           </TextBox>

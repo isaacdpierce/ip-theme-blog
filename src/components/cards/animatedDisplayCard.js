@@ -101,7 +101,7 @@ const DisplayCard = ({
       sx={{
         backgroundColor: `background.${isEven(index) ? "dark" : "light"}`,
         color: `text.${isEven(index) ? "light" : "dark"}`,
-        p: [2, 3, 4],
+        p: [3, 4],
         mb: 5,
         fontFamily: "body",
       }}
@@ -119,6 +119,7 @@ const DisplayCard = ({
           },
           a: {
             color: `links.${isEven(index) ? "light" : "dark"}`,
+            fontSize: [2, 4],
           },
           p: {
             m: 0,
@@ -131,13 +132,13 @@ const DisplayCard = ({
         {description && <p>{description}</p>}
         <div>
           {url && (
-            <StyledLink sx={{ pt: 1, px: 2, mr: 3 }}>
+            <StyledLink sx={{ pt: 1, px: [2], mr: [2, 3] }}>
               <a href={url}>Live</a>
             </StyledLink>
           )}
           {code &&
             code.map(link => (
-              <StyledLink sx={{ pt: 1, px: 2, mr: 3 }}>
+              <StyledLink sx={{ pt: 1, px: [2], mr: [2, 3] }}>
                 <a href={link.url}>{link.source}</a>
               </StyledLink>
             ))}

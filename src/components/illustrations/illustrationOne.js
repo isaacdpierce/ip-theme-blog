@@ -2,12 +2,7 @@ import React from "react"
 
 export default () => {
   return (
-    <svg
-      width="400"
-      height="401"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 401 401" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path fill="#D6DEE7" d="M0 .507h400v400H0z" />
       <path
         fill="#fff"
