@@ -16,9 +16,14 @@ const StyledNavMenu = styled.div`
   align-items: center;
   will-change: color;
   text-align: center;
+  position: relative;
+
   .nav-link {
     transition: all 0.5s ease;
+    display: inline;
+    padding-left: 4px;
     &:hover {
+      padding-left: 0;
       color: ${colors.black};
       text-shadow: 0 0 1px ${colors.black};
       letter-spacing: 0.5px;
