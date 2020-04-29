@@ -31,6 +31,7 @@ const SquareBox = ({ children, animated = true }) => {
       sx={{
         color: "text.light",
         backgroundColor: "background.dark",
+
         h2: {
           fontSize: [3, 4],
           textTransform: "uppercase",

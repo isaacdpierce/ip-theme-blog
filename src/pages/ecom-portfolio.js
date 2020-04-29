@@ -75,7 +75,7 @@ const Portfolios = ({ data, location }) => {
           <IllustrationTwo />
         </SquareBox>
       </StyledPortfolioSection>
-      <StyledPortfolioSection row={2} sx={{ mb: 6 }}>
+      <StyledPortfolioSection row={2}>
         <SquareBox>
           <IllustrationThree />
         </SquareBox>
