@@ -14,13 +14,14 @@ const StyledContent = styled(motion.div)`
   border-radius: 3px;
   box-shadow: 0px 1px 1px 1px #00000035;
   border-top: 1px solid #ffffff15;
-  min-width: 60vw;
-  max-width: 75vw;
-  @media (max-width: 1100px) {
-    min-width: 80vw;
-  }
+  width: 930px;
+
   @media (max-width: 950px) {
+    max-width: 80vw;
     flex-direction: column;
+  }
+  @media (max-width: 600px) {
+    width: 90vw;
   }
 `
 
