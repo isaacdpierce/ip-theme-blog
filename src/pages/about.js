@@ -38,7 +38,7 @@ const valuesParsArray = [
 const AboutWrapper = styled.section`
   grid-column: 1 / -1;
   display: grid;
-  align-content: start;
+  align-content: space-between;
   justify-content: center;
   grid-template-columns: 40vw 10vw 40vw;
   min-height: calc(100vh - 70px);
@@ -50,7 +50,7 @@ const About = ({ location }) => {
   return (
     <Layout path={location.pathname}>
       <SEO title="About Isaac Pierce" />
-      <AboutWrapper sx={{ pt: [3, 4, 5] }}>
+      <AboutWrapper sx={{ py: [3, 4, 5] }}>
         <AnimatedListTextBox side="left">
           {valuesParagraphs}
         </AnimatedListTextBox>

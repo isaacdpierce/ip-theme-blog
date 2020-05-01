@@ -22,29 +22,23 @@ const ListTextBox = ({ children, side }) => {
     <StyledListTextBox
       side={side}
       initial={{
-        // x: `${side === "left" ? "100vw" : "-100vw"}`,
         color: "transparent",
         textShadow: `0 0 15px ${side === "left" ? "black" : "white"}`,
       }}
       animate={{
-        x: 0,
         textShadow: `0 0 0px ${side === "left" ? "black" : "white"}`,
       }}
       transition={{
-        type: "spring",
-        mass: 0.9,
-        damping: 15,
+        duration: 1,
       }}
       sx={{
-        // textAlign: `${side === "left" ? "left" : "center"}`,
-        mb: 4,
         ml: 0,
-        py: [5, 6],
+        py: [4, 5],
         px: [4, 5],
         fontSize: [2, 3],
         letterSpacing: "body",
         backgroundColor: `${side === "left" ? "white" : "darkGrey"}`,
-        lineHeight: 1.3,
+        lineHeight: 1.1,
       }}
     >
       {children}

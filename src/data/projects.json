@@ -1,7 +1,7 @@
 [
   {
     "name": "berryman",
-    "title": "Berry Brother's Meats",
+    "title": "Berryman Brothers",
     "description": "Shopify E-commerce solution. Customized 3rd Party theme. Integrated apps. Designed and delivered successful email campaigns.",
     "tech": "TECH:  HTML, CSS, liquid, Javascript, JQuery, Shopify dashboard, Omnisend.",
     "image": "../images/projects/berryman.png",
@@ -31,11 +31,11 @@
     "tech": "TECH:  Gatsby, React, MDX and Styled Components",
     "image": "../images/projects/gatsby-portfolio.png",
     "date": "2019",
-    "url": "fill/with/new/address",
+    "url": "https://ip-portfolio-theme.netlify.app/",
     "code": [
       {
         "source": "github",
-        "url": "https://github.com/isaacdpierce/design-rocket"
+        "url": "https://github.com/isaacdpierce/isaacpierce-gatsby"
       }
     ]
   },
