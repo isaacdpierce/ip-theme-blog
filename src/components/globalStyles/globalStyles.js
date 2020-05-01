@@ -10,7 +10,6 @@ export default () => {
           font-family: ${fonts.body};
           -ms-text-size-adjust: 100%;
           -webkit-text-size-adjust: 100%;
-          scroll-behavior: smooth;
         }
         body {
           margin: 0;
