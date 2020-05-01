@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Isaac Pierce`,
-    description: `The personal blog and portfolio of Isaac Pierce.`,
-    headline: "Finger lickin' good!",
+    description: `The portfolio of Isaac Pierce.`,
+    headline:
+      "I build JAMstack websites and apps with React, Node, PostgresQL, GraphQL, Gatsby and Shopify!",
     author: `@isaacdpierce`,
     keywords: [
       "web development",
